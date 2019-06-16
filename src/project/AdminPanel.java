@@ -84,7 +84,7 @@ public class AdminPanel extends javax.swing.JFrame {
         delEntryModel = new javax.swing.JTextField();
         delUpdateCat = new javax.swing.JComboBox<String>();
         jLabel14 = new javax.swing.JLabel();
-        stockUpdateSetQty = new javax.swing.JTextField();
+        stockUpdateSetNama = new javax.swing.JTextField();
         billingPanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         billingTable = new javax.swing.JTable();
@@ -359,7 +359,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel10.setText("Enter model:");
+        jLabel10.setText("Masukkan ID:");
 
         jLabel11.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 77, 64));
@@ -417,12 +417,12 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel14.setText("Set Quantity:");
+        jLabel14.setText("Ubah Nama:");
 
-        stockUpdateSetQty.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        stockUpdateSetQty.addActionListener(new java.awt.event.ActionListener() {
+        stockUpdateSetNama.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        stockUpdateSetNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stockUpdateSetQtyActionPerformed(evt);
+                stockUpdateSetNamaActionPerformed(evt);
             }
         });
 
@@ -455,7 +455,7 @@ public class AdminPanel extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(stockUpdateSetQty, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(stockUpdateSetNama, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26)
                 .addComponent(updateStockButton)
                 .addContainerGap(77, Short.MAX_VALUE))
@@ -476,7 +476,7 @@ public class AdminPanel extends javax.swing.JFrame {
                         .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(stockStatusCat, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(stockUpdateSetQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(stockUpdateSetNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(updateStockButton))))
                 .addGap(27, 27, 27)
                 .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -662,25 +662,25 @@ public class AdminPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
        try{
             String model = stockUpdateModel.getText();
-            int qty = Integer.parseInt(stockUpdateSetQty.getText());
-
+            String brand = stockUpdateSetNama.getText();
+            
             if(stockStatusCat.getSelectedItem().equals("Electronics")){
                 ElectronicsDB.flag = true;
-                ElectronicsDB.updateElectronicsDB(model, qty);
+                ElectronicsDB.updateElectronicsDB(model, brand);
             }
 
             else if(stockStatusCat.getSelectedItem().equals("Mobiles")){
                 MobileDB.flag = true;
-                MobileDB.updateMobileDB(model, qty);
+                MobileDB.updateMobileDB(model, brand);
             }
 
             else if(stockStatusCat.getSelectedItem().equals("Kids")){
                 KidsDB.flag = true;
-                KidsDB.updateKidsDB(model);
+                KidsDB.updateKidsDB(model, brand);
             }
             
             stockUpdateModel.setText("");
-            stockUpdateSetQty.setText("");
+            stockUpdateSetNama.setText("");
         
        }catch(Exception e){
            JOptionPane.showMessageDialog(null,e);
@@ -689,9 +689,9 @@ public class AdminPanel extends javax.swing.JFrame {
    
     }//GEN-LAST:event_updateStockButtonActionPerformed
 
-    private void stockUpdateSetQtyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stockUpdateSetQtyActionPerformed
+    private void stockUpdateSetNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stockUpdateSetNamaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_stockUpdateSetQtyActionPerformed
+    }//GEN-LAST:event_stockUpdateSetNamaActionPerformed
 
     private void delEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delEntryActionPerformed
         // TODO add your handling code here:
@@ -833,7 +833,7 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel selectedPhoto;
     private javax.swing.JComboBox<String> stockStatusCat;
     private javax.swing.JTextField stockUpdateModel;
-    private javax.swing.JTextField stockUpdateSetQty;
+    private javax.swing.JTextField stockUpdateSetNama;
     private javax.swing.JButton updateButton;
     private javax.swing.JPanel updatePanel;
     private javax.swing.JButton updateStockButton;

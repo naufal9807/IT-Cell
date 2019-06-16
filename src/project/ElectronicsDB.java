@@ -42,13 +42,13 @@ public class ElectronicsDB {
     
     }
     
-    public static void updateElectronicsDB(String model, int qty){
+    public static void updateElectronicsDB(String model, String brand){
          try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             
-            PreparedStatement ps = con.prepareStatement("UPDATE electronics SET mquantity=? WHERE mmodel=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE electronics SET mbrand=? WHERE id=?");
             
-            ps.setInt(1, qty);
+            ps.setString(1, brand);
             ps.setString(2, model);
             if(ps.executeUpdate()==0)
                 JOptionPane.showMessageDialog(null, "Entry does not exist!");

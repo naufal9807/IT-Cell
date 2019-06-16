@@ -42,18 +42,18 @@ public class MobileDB {
     
     }
     
-    public static void updateMobileDB(String model, int qty){
+    public static void updateMobileDB(String model, String brand){
          try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
             
-            PreparedStatement ps = con.prepareStatement("UPDATE mobiles SET mquantity=? WHERE mmodel=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE mobiles SET mbrand=? WHERE id=?");
             
-            ps.setInt(1, qty);
+            ps.setString(1, brand);
             ps.setString(2, model);
             if(ps.executeUpdate()==0)
-                JOptionPane.showMessageDialog(null, "Entry does not exist!");
+                JOptionPane.showMessageDialog(null, "Konten Tidak Terupdate!");
             else if(ps.executeUpdate()==1 && flag){
-                JOptionPane.showMessageDialog(null, "Stock updated successfully!");
+                JOptionPane.showMessageDialog(null, "Konten Berhasil Terupdate!");
                 flag = false;
             }
 
@@ -68,7 +68,7 @@ public class MobileDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mdescription, mphoto FROM mobiles");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel,mdescription, mphoto FROM mobiles");
             
             ProductList pl;
             

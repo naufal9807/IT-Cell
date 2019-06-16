@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import static project.MobileDB.flag;
 
 /**
  *
@@ -42,19 +43,18 @@ public class KidsDB {
     
     }
     
-    public static void updateKidsDB(String model){
+    public static void updateKidsDB(String model, String brand){
          try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             
-            PreparedStatement ps = con.prepareStatement("UPDATE kids SET mquantity=? WHERE mmodel=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE kids SET mquantity=? WHERE id=?");
             
-            
-            ps.setString(1, model);
-            
+            ps.setString(1, brand);
+            ps.setString(2, model);
             if(ps.executeUpdate()==0)
-                JOptionPane.showMessageDialog(null, "Entry does not exist!");
+                JOptionPane.showMessageDialog(null, "Konten Tidak Terupdate!");
             else if(ps.executeUpdate()==1 && flag){
-                JOptionPane.showMessageDialog(null, "Stock updated successfully!");
+                JOptionPane.showMessageDialog(null, "Konten Berhasil Terupdate!");
                 flag = false;
             }
 
@@ -141,7 +141,7 @@ public class KidsDB {
             PreparedStatement ps = con.prepareStatement("DELETE FROM kids WHERE id=?");
             ps.setString(1, model);
             if(ps.executeUpdate()==0)
-                JOptionPane.showMessageDialog(null, "Konten tidak ada!");
+                JOptionPane.showMessageDialog(null, "Konten tidak terhapus!");
             else
                 JOptionPane.showMessageDialog(null, "Konten berhasil dihapus!");
             
