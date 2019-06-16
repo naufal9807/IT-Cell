@@ -350,7 +350,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Stock", "Category"
+                "ID", "Nama", "Detail", "Category"
             }
         ));
         checkStockTable.setEnabled(false);
@@ -363,7 +363,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel11.setText("Edit Konte:");
+        jLabel11.setText("Edit Konten:");
 
         stockUpdateModel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         stockUpdateModel.addActionListener(new java.awt.event.ActionListener() {
@@ -399,11 +399,11 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel12.setText("Delete Entry:");
+        jLabel12.setText("Hapus Konten:");
 
         jLabel13.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel13.setText("Enter model:");
+        jLabel13.setText("Masukkan ID:");
 
         delEntryModel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         delEntryModel.addActionListener(new java.awt.event.ActionListener() {

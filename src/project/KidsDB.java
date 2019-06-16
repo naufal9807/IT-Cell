@@ -117,13 +117,13 @@ public class KidsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel FROM kids");
+            ResultSet rs = ps.executeQuery("SELECT id, mbrand, mmodel FROM kids");
             
             ProductList pl;
             
             while(rs.next()){
-                pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        null, null);
+                pl = new ProductList(rs.getString("id"),rs.getString("mbrand"),rs.getString("mmodel"),
+                        null);
                 
                 list.add(pl);
 

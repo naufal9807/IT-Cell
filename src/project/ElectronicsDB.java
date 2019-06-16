@@ -115,13 +115,13 @@ public class ElectronicsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel FROM electronics");
+            ResultSet rs = ps.executeQuery("SELECT id, mbrand, mmodel FROM electronics");
             
             ProductList pl;
             
             while(rs.next()){
-                pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        null, null);
+                pl = new ProductList(rs.getString("id"),rs.getString("mbrand"),rs.getString("mmodel"),
+                        null);
                 
                 list.add(pl);
 

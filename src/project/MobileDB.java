@@ -26,8 +26,7 @@ public class MobileDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
          
-            PreparedStatement ps = con.prepareStatement("INSERT INTO mobiles(mbrand, mmodel, mprice,"
-                    + "mquantity, mdescription, mphoto) VALUES(?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO mobiles(mbrand, mmodel, mdescription, mphoto) VALUES(?,?,?,?)");
             
             ps.setString(1, brand);
             ps.setString(2, model);
@@ -115,13 +114,13 @@ public class MobileDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel FROM mobiles");
+            ResultSet rs = ps.executeQuery("SELECT id, mbrand, mmodel FROM mobiles");
             
             ProductList pl;
             
             while(rs.next()){
-                pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        null, null);
+                pl = new ProductList(rs.getString("id"),rs.getString("mbrand"),rs.getString("mmodel"),
+                        null);
                 
                 list.add(pl);
 
