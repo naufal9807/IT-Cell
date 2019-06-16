@@ -232,7 +232,7 @@ public class MainPage extends javax.swing.JFrame {
         BackgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
+        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(1199, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
@@ -251,7 +251,6 @@ public class MainPage extends javax.swing.JFrame {
         jSeparator6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jSeparator6.setOpaque(true);
 
-        searchBar.setBackground(new java.awt.Color(0, 150, 136));
         searchBar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         searchBar.setForeground(new java.awt.Color(255, 255, 255));
         searchBar.setBorder(null);
@@ -266,7 +265,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        searchButton.setBackground(new java.awt.Color(0, 121, 107));
+        searchButton.setBackground(new java.awt.Color(255, 0, 0));
         searchButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Search_31px.png"))); // NOI18N
@@ -341,9 +340,9 @@ public class MainPage extends javax.swing.JFrame {
 
         BackgroundPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 60));
 
-        jPanel3.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
 
-        newlyAdded.setBackground(new java.awt.Color(0, 150, 136));
+        newlyAdded.setBackground(new java.awt.Color(255, 0, 0));
         newlyAdded.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
         newlyAdded.setText("Newly Added");
@@ -375,7 +374,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        electronicsButton.setBackground(new java.awt.Color(0, 150, 136));
+        electronicsButton.setBackground(new java.awt.Color(255, 0, 0));
         electronicsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         electronicsButton.setForeground(new java.awt.Color(255, 255, 255));
         electronicsButton.setText("Electronics");
@@ -407,7 +406,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        accountButton.setBackground(new java.awt.Color(0, 150, 136));
+        accountButton.setBackground(new java.awt.Color(255, 0, 0));
         accountButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         accountButton.setForeground(new java.awt.Color(255, 255, 255));
         accountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Person_48px.png"))); // NOI18N
@@ -439,7 +438,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        cartButton.setBackground(new java.awt.Color(0, 150, 136));
+        cartButton.setBackground(new java.awt.Color(255, 0, 0));
         cartButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         cartButton.setForeground(new java.awt.Color(255, 255, 255));
         cartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_OpenCart_24px.png"))); // NOI18N
@@ -474,7 +473,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        mobilesButton.setBackground(new java.awt.Color(0, 150, 136));
+        mobilesButton.setBackground(new java.awt.Color(255, 0, 0));
         mobilesButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         mobilesButton.setForeground(new java.awt.Color(255, 255, 255));
         mobilesButton.setText("Mobiles");
@@ -506,7 +505,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        kidsButton.setBackground(new java.awt.Color(0, 150, 136));
+        kidsButton.setBackground(new java.awt.Color(255, 0, 0));
         kidsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         kidsButton.setForeground(new java.awt.Color(255, 255, 255));
         kidsButton.setText("Kids Corner");
@@ -551,7 +550,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 343, Short.MAX_VALUE)
                 .addComponent(cartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -568,7 +567,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(newlyAdded, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        BackgroundPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1210, 50));
+        BackgroundPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1210, 50));
 
         cardParentPanel.setLayout(new java.awt.CardLayout());
 
