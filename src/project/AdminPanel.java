@@ -618,7 +618,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 ElectronicsDB.updateElectronicsDB(model, brand);
             }
 
-            else if(stockStatusCat.getSelectedItem().equals("Mobiles")){
+            else if(stockStatusCat.getSelectedItem().equals("Mobile")){
                 MobileDB.flag = true;
                 MobileDB.updateMobileDB(model, brand);
             }
