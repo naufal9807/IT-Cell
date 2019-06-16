@@ -1489,8 +1489,6 @@ public class MainPage extends javax.swing.JFrame {
         mobileTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         mobileTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         mobileTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        mobileTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        mobileTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
