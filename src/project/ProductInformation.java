@@ -282,8 +282,7 @@ public class ProductInformation extends javax.swing.JFrame {
         }
         else{
             int qty = Integer.parseInt(this.productQtyField.getText());
-            ProductList p = new ProductList(this.productInfoBrandName.getText(), this.productInfoModel.getText(), qty*Integer.parseInt(this.productInfoPrice.getText()), 
-                                                Integer.parseInt(this.productQtyField.getText()), null, null);
+            ProductList p = new ProductList(this.productInfoBrandName.getText(), this.productInfoModel.getText(), null, null);
             cartItem.add(p);
             JOptionPane.showMessageDialog(null, "Product added to cart!");
    
