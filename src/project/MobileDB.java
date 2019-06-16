@@ -26,12 +26,10 @@ public class MobileDB {
         try {
             Connection con = Koneksi.getConnection();
          
-            PreparedStatement ps = con.prepareStatement("INSERT INTO mobiles(mbrand, mmodel, mdescription, mphoto) VALUES(?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO mobiles(nama, detail, mdescription, mphoto) VALUES(?,?,?,?)");
             
             ps.setString(1, brand);
             ps.setString(2, model);
-            ps.setInt(3, price);
-            ps.setInt(4, qty);
             ps.setString(5, description);
             ps.setString(6, imagePath);
             if(ps.executeUpdate()==1)
@@ -69,14 +67,14 @@ public class MobileDB {
         try {
             Connection con = Koneksi.getConnection();
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM mobiles");
+            ResultSet rs = ps.executeQuery("SELECT mphoto, nama, detail, mdescription FROM mobiles");
             
             ProductList pl;
             
             while(rs.next()){
-                pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getString("mdescription"),
-                        rs.getString("mphoto"));
+                pl = new ProductList(rs.getString("mphoto"),rs.getString("nama"),
+                        rs.getString("detail"),
+                        rs.getString("mdescription"));
                 
                 list.add(pl);
 
@@ -92,14 +90,14 @@ public class MobileDB {
         try {
             Connection con = Koneksi.getConnection();
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM mobiles ORDER BY id DESC LIMIT 3");
+            ResultSet rs = ps.executeQuery("SELECT mphoto, nama, detail, mdescription FROM mobiles ORDER BY id_mobile DESC LIMIT 3");
             
             ProductList pl;
             
             while(rs.next()){
-                pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getString("mdescription"),
-                        rs.getString("mphoto"));
+                pl = new ProductList(rs.getString("mphoto"),rs.getString("nama"),
+                        rs.getString("detail"),
+                        rs.getString("mdescription"));
                 
                 list.add(pl);
 

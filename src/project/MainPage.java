@@ -1922,9 +1922,9 @@ public class MainPage extends javax.swing.JFrame {
 
         }
         else{
-            Date date = new Date();
-            JFrame da = new DeliveryAddress(logger, Integer.parseInt(billLabel.getText()), date.toString());
-            da.setVisible(true);
+//            Date date = new Date();
+//            JFrame da = new DeliveryAddress(logger, Integer.parseInt(billLabel.getText()), date.toString());
+//            da.setVisible(true);
         }
     }//GEN-LAST:event_buyButtonActionPerformed
 
