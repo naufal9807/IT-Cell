@@ -27,7 +27,7 @@ public class MobileDB {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
          
             PreparedStatement ps = con.prepareStatement("INSERT INTO mobiles(mbrand, mmodel, mprice,"
-                    + "mquantity, mdescription, mphoto) VALUES(?,?,?,?,?,?)");
+                    + "mquantity, mdescription, mphoto) VALUES(?,?,?,?)");
             
             ps.setString(1, brand);
             ps.setString(2, model);
@@ -80,7 +80,7 @@ public class MobileDB {
                 list.add(pl);
 
             }
-
+               con.close();
         } catch (SQLException ex) {
             Logger.getLogger(MobileDB.class.getName()).log(Level.SEVERE, null, ex);
         }
