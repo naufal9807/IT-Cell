@@ -215,7 +215,7 @@
                       <Component id="mobilesButton" min="-2" pref="137" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="kidsButton" min="-2" pref="147" max="-2" attributes="0"/>
-                      <EmptySpace pref="478" max="32767" attributes="0"/>
+                      <EmptySpace pref="544" max="32767" attributes="0"/>
                       <Component id="accountButton" min="-2" pref="53" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
@@ -245,7 +245,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Newly Added"/>
+                <Property name="text" type="java.lang.String" value="Home"/>
                 <Property name="toolTipText" type="java.lang.String" value="Check what&apos;s new!"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -274,7 +274,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Electronics"/>
+                <Property name="text" type="java.lang.String" value="Berita"/>
                 <Property name="toolTipText" type="java.lang.String" value="TV, Fridge, Electronic Devices"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>

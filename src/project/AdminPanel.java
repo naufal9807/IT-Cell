@@ -296,7 +296,7 @@ public class AdminPanel extends javax.swing.JFrame {
         updatePanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 140, -1));
 
         mCat.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        mCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Electronics", "Mobile", "Kids" }));
+        mCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Berita", "Mobile", "Tips" }));
         updatePanel.add(mCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
 
         mDescription.setColumns(20);
@@ -373,7 +373,7 @@ public class AdminPanel extends javax.swing.JFrame {
         });
 
         stockStatusCat.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        stockStatusCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Electronics", "Mobiles", "Kids" }));
+        stockStatusCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Berita", "Mobile", "Tips" }));
 
         updateStockButton.setBackground(new java.awt.Color(0, 77, 64));
         updateStockButton.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -413,7 +413,7 @@ public class AdminPanel extends javax.swing.JFrame {
         });
 
         delUpdateCat.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        delUpdateCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Electronics", "Mobiles", "Kids" }));
+        delUpdateCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Berita", "Mobile", "Tips" }));
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 77, 64));
@@ -624,11 +624,11 @@ public class AdminPanel extends javax.swing.JFrame {
                 MobileDB.insertIntoMobileDB(mBrand.getText(), mModel.getText(), mDescription.getText(), path);
         }
         
-        else if(mCat.getSelectedItem().equals("Electronics")){
+        else if(mCat.getSelectedItem().equals("Berita")){
             if(!path.equals(""))
                 ElectronicsDB.insertIntoElectronicsDB(mBrand.getText(), mModel.getText(), mDescription.getText(), path);
         }
-        else if(mCat.getSelectedItem().equals("Kids")){
+        else if(mCat.getSelectedItem().equals("Tips")){
             if(!path.equals(""))
                 KidsDB.insertIntoKidsDB(mBrand.getText(), mModel.getText(), mDescription.getText(), path);
         }
@@ -664,7 +664,7 @@ public class AdminPanel extends javax.swing.JFrame {
             String model = stockUpdateModel.getText();
             String brand = stockUpdateSetNama.getText();
             
-            if(stockStatusCat.getSelectedItem().equals("Electronics")){
+            if(stockStatusCat.getSelectedItem().equals("Berita")){
                 ElectronicsDB.flag = true;
                 ElectronicsDB.updateElectronicsDB(model, brand);
             }
@@ -674,7 +674,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 MobileDB.updateMobileDB(model, brand);
             }
 
-            else if(stockStatusCat.getSelectedItem().equals("Kids")){
+            else if(stockStatusCat.getSelectedItem().equals("Tips")){
                 KidsDB.flag = true;
                 KidsDB.updateKidsDB(model, brand);
             }
@@ -698,13 +698,13 @@ public class AdminPanel extends javax.swing.JFrame {
         try{
             String del = delEntryModel.getText();
         
-        if(delUpdateCat.getSelectedItem().equals("Electronics")){
+        if(delUpdateCat.getSelectedItem().equals("Berita")){
             ElectronicsDB.delete(del);
         }
         else if(delUpdateCat.getSelectedItem().equals("Mobiles")){
             MobileDB.delete(del);
         }
-        else if(delUpdateCat.getSelectedItem().equals("Kids")){
+        else if(delUpdateCat.getSelectedItem().equals("Tips")){
             KidsDB.delete(del);
         }
         delEntryModel.setText("");
@@ -734,8 +734,8 @@ public class AdminPanel extends javax.swing.JFrame {
         for(int i=0; i<list.size(); i++){
             data[0] = list.get(i).getBrand();
             data[1] = list.get(i).getModel();
-            data[2] = list.get(i).getQty();
-            data[3] = "Electronics";
+            data[2] = list.get(i).getDescription();
+            data[3] = "Berita";
 
             model.addRow(data);
         }
@@ -747,7 +747,7 @@ public class AdminPanel extends javax.swing.JFrame {
         for(int i=0; i<list.size(); i++){
             data[0] = list.get(i).getBrand();
             data[1] = list.get(i).getModel();
-            data[2] = list.get(i).getQty();
+            data[2] = list.get(i).getDescription();
             data[3] = "Mobiles";
 
             model.addRow(data);
@@ -760,8 +760,8 @@ public class AdminPanel extends javax.swing.JFrame {
         for(int i=0; i<list.size(); i++){
             data[0] = list.get(i).getBrand();
             data[1] = list.get(i).getModel();
-            data[2] = list.get(i).getQty();
-            data[3] = "Kids";
+            data[2] = list.get(i).getDescription();
+            data[3] = "Tips";
 
             model.addRow(data);
         }

@@ -323,7 +323,7 @@ public class MainPage extends javax.swing.JFrame {
         newlyAdded.setBackground(new java.awt.Color(255, 0, 0));
         newlyAdded.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
-        newlyAdded.setText("Newly Added");
+        newlyAdded.setText("Home");
         newlyAdded.setToolTipText("Check what's new!");
         newlyAdded.setBorderPainted(false);
         newlyAdded.setContentAreaFilled(false);
@@ -355,7 +355,7 @@ public class MainPage extends javax.swing.JFrame {
         electronicsButton.setBackground(new java.awt.Color(255, 0, 0));
         electronicsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         electronicsButton.setForeground(new java.awt.Color(255, 255, 255));
-        electronicsButton.setText("Electronics");
+        electronicsButton.setText("Berita");
         electronicsButton.setToolTipText("TV, Fridge, Electronic Devices");
         electronicsButton.setBorderPainted(false);
         electronicsButton.setContentAreaFilled(false);
@@ -493,7 +493,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 478, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 544, Short.MAX_VALUE)
                 .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -1377,7 +1377,7 @@ public class MainPage extends javax.swing.JFrame {
 
     private void electronicsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_electronicsButtonActionPerformed
         // TODO add your handling code here:
-        ProductInformation.categoryChooser = "electronics";
+        ProductInformation.categoryChooser = "Berita";
         ArrayList<ProductList> list = ElectronicsDB.TableGenerator();
         Object rowData[] = new Object[6];
         
@@ -1540,7 +1540,7 @@ public class MainPage extends javax.swing.JFrame {
 
     private void kidsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kidsButtonActionPerformed
         // TODO add your handling code here:
-        ProductInformation.categoryChooser = "kids";
+        ProductInformation.categoryChooser = "Tips";
         ArrayList<ProductList> list = KidsDB.TableGenerator();
         Object rowData[] = new Object[6];
         
@@ -1842,11 +1842,11 @@ public class MainPage extends javax.swing.JFrame {
         int rowIndex = homeTable.getSelectedRow();
         
         if(rowIndex<=2)
-            ProductInformation.categoryChooser = "electronics";
+            ProductInformation.categoryChooser = "Berita";
         else if(rowIndex>2 && rowIndex<=5)
             ProductInformation.categoryChooser = "mobiles";
         else 
-            ProductInformation.categoryChooser = "kids";
+            ProductInformation.categoryChooser = "Tips";
         
         pi.setVisible(true);
         pi.pack();
@@ -1910,7 +1910,7 @@ public class MainPage extends javax.swing.JFrame {
         if(searchBar.getText().equals(""))
             JOptionPane.showMessageDialog(null, "Search field empty!");
         else if(Search.electronics==0 && Search.mobile==0 && Search.kids==0)
-            JOptionPane.showMessageDialog(null, "Sorry! Product does not exist!");
+            JOptionPane.showMessageDialog(null, "Maaf! Konten Tidak Tersedia!");
         else{
             cardParentPanel.removeAll();
             cardParentPanel.add(searchPanel);
@@ -1984,11 +1984,11 @@ public class MainPage extends javax.swing.JFrame {
         int rowIndex = searchTable.getSelectedRow();
         
         if(Search.electronics!=0 && rowIndex<Search.electronics)
-            ProductInformation.categoryChooser = "electronics";
+            ProductInformation.categoryChooser = "Berita";
         else if(Search.mobile!=0 && rowIndex>=Search.electronics && rowIndex<Search.electronics+Search.mobile)
             ProductInformation.categoryChooser = "mobiles";
         else 
-            ProductInformation.categoryChooser = "kids";
+            ProductInformation.categoryChooser = "Tips";
         
         pi.setVisible(true);
         pi.pack();
