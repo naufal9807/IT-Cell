@@ -142,7 +142,6 @@ public class MainPage extends javax.swing.JFrame {
         newlyAdded = new javax.swing.JButton();
         electronicsButton = new javax.swing.JButton();
         accountButton = new javax.swing.JButton();
-        cartButton = new javax.swing.JButton();
         mobilesButton = new javax.swing.JButton();
         kidsButton = new javax.swing.JButton();
         cardParentPanel = new javax.swing.JPanel();
@@ -219,7 +218,7 @@ public class MainPage extends javax.swing.JFrame {
         BackgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(1199, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
@@ -238,9 +237,7 @@ public class MainPage extends javax.swing.JFrame {
         jSeparator6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jSeparator6.setOpaque(true);
 
-        searchBar.setBackground(new java.awt.Color(0, 150, 136));
         searchBar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        searchBar.setForeground(new java.awt.Color(255, 255, 255));
         searchBar.setBorder(null);
         searchBar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -253,7 +250,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        searchButton.setBackground(new java.awt.Color(0, 121, 107));
+        searchButton.setBackground(new java.awt.Color(204, 0, 0));
         searchButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Search_31px.png"))); // NOI18N
@@ -328,9 +325,9 @@ public class MainPage extends javax.swing.JFrame {
 
         BackgroundPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 60));
 
-        jPanel3.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
 
-        newlyAdded.setBackground(new java.awt.Color(0, 150, 136));
+        newlyAdded.setBackground(new java.awt.Color(255, 0, 0));
         newlyAdded.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
         newlyAdded.setText("Newly Added");
@@ -362,7 +359,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        electronicsButton.setBackground(new java.awt.Color(0, 150, 136));
+        electronicsButton.setBackground(new java.awt.Color(255, 0, 0));
         electronicsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         electronicsButton.setForeground(new java.awt.Color(255, 255, 255));
         electronicsButton.setText("Electronics");
@@ -394,7 +391,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        accountButton.setBackground(new java.awt.Color(0, 150, 136));
+        accountButton.setBackground(new java.awt.Color(255, 0, 0));
         accountButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         accountButton.setForeground(new java.awt.Color(255, 255, 255));
         accountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Person_48px.png"))); // NOI18N
@@ -426,42 +423,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        cartButton.setBackground(new java.awt.Color(0, 150, 136));
-        cartButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        cartButton.setForeground(new java.awt.Color(255, 255, 255));
-        cartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_OpenCart_24px.png"))); // NOI18N
-        cartButton.setText("Cart");
-        cartButton.setToolTipText("View your cart.");
-        cartButton.setBorderPainted(false);
-        cartButton.setContentAreaFilled(false);
-        cartButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cartButton.setMaximumSize(new java.awt.Dimension(67, 49));
-        cartButton.setOpaque(true);
-        cartButton.setPreferredSize(new java.awt.Dimension(67, 49));
-        cartButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cartButtonMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                cartButtonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                cartButtonMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                cartButtonMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                cartButtonMouseReleased(evt);
-            }
-        });
-        cartButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cartButtonActionPerformed(evt);
-            }
-        });
-
-        mobilesButton.setBackground(new java.awt.Color(0, 150, 136));
+        mobilesButton.setBackground(new java.awt.Color(255, 0, 0));
         mobilesButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         mobilesButton.setForeground(new java.awt.Color(255, 255, 255));
         mobilesButton.setText("Mobiles");
@@ -493,10 +455,10 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        kidsButton.setBackground(new java.awt.Color(0, 150, 136));
+        kidsButton.setBackground(new java.awt.Color(255, 0, 0));
         kidsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         kidsButton.setForeground(new java.awt.Color(255, 255, 255));
-        kidsButton.setText("Kids Corner");
+        kidsButton.setText("Tips");
         kidsButton.setToolTipText("Toys, Teddys and much more!");
         kidsButton.setBorderPainted(false);
         kidsButton.setContentAreaFilled(false);
@@ -538,9 +500,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
-                .addComponent(cartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 478, Short.MAX_VALUE)
                 .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -549,7 +509,6 @@ public class MainPage extends javax.swing.JFrame {
             .addComponent(accountButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(electronicsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(cartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(newlyAdded, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -599,11 +558,17 @@ public class MainPage extends javax.swing.JFrame {
         homePanel.setLayout(homePanelLayout);
         homePanelLayout.setHorizontalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
+                .addContainerGap())
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+                .addGap(37, 37, 37))
         );
 
         cardParentPanel.add(homePanel, "card5");
@@ -1367,22 +1332,22 @@ public class MainPage extends javax.swing.JFrame {
 
     private void newlyAddedMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseReleased
         // TODO add your handling code here:
-        newlyAdded.setBackground(new Color(0, 150, 136));
+        newlyAdded.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_newlyAddedMouseReleased
 
     private void newlyAddedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMousePressed
         // TODO add your handling code here:
-        newlyAdded.setBackground(new Color(0, 77, 64));
+        newlyAdded.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_newlyAddedMousePressed
 
     private void newlyAddedMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseExited
         // TODO add your handling code here:
-        newlyAdded.setBackground(new Color(0, 150, 136));
+        newlyAdded.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_newlyAddedMouseExited
 
     private void newlyAddedMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseEntered
         // TODO add your handling code here:;
-        newlyAdded.setBackground(new Color(0, 137, 123));
+        newlyAdded.setBackground(new Color(204,0,0));
 
     }//GEN-LAST:event_newlyAddedMouseEntered
 
@@ -1400,22 +1365,22 @@ public class MainPage extends javax.swing.JFrame {
 
     private void electronicsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseEntered
         // TODO add your handling code here:
-         electronicsButton.setBackground(new Color(0, 137, 123));
+         electronicsButton.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_electronicsButtonMouseEntered
 
     private void electronicsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseExited
         // TODO add your handling code here:
-        electronicsButton.setBackground(new Color(0, 150, 136));
+        electronicsButton.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_electronicsButtonMouseExited
 
     private void electronicsButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMousePressed
         // TODO add your handling code here:
-        electronicsButton.setBackground(new Color(0, 77, 64));
+        electronicsButton.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_electronicsButtonMousePressed
 
     private void electronicsButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseReleased
         // TODO add your handling code here:
-         electronicsButton.setBackground(new Color(0, 150, 136));
+         electronicsButton.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_electronicsButtonMouseReleased
 
     private void electronicsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_electronicsButtonActionPerformed
@@ -1456,22 +1421,22 @@ public class MainPage extends javax.swing.JFrame {
 
     private void accountButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountButtonMouseEntered
         // TODO add your handling code here:
-        accountButton.setBackground(new Color(0, 137, 123));
+        accountButton.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_accountButtonMouseEntered
 
     private void accountButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountButtonMouseExited
         // TODO add your handling code here:
-        accountButton.setBackground(new Color(0, 150, 136));
+        accountButton.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_accountButtonMouseExited
 
     private void accountButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountButtonMousePressed
         // TODO add your handling code here:
-        accountButton.setBackground(new Color(0, 77, 64));
+        accountButton.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_accountButtonMousePressed
 
     private void accountButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountButtonMouseReleased
         // TODO add your handling code here:
-        accountButton.setBackground(new Color(0, 150, 136));
+        accountButton.setBackground(new Color(204,0,0));
 
     }//GEN-LAST:event_accountButtonMouseReleased
 
@@ -1490,54 +1455,6 @@ public class MainPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_accountButtonActionPerformed
 
-    private void cartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartButtonActionPerformed
-        cardParentPanel.removeAll();
-        cardParentPanel.add(cartPanel);
-        cardParentPanel.repaint();
-        cardParentPanel.revalidate();
-        
-         DefaultTableModel model =  (DefaultTableModel) cartItemTable.getModel();
-         model.setRowCount(0);
-         total = 0;
-         tot = "";
-        
-        for(int i=0; i<ProductInformation.cartItem.size(); i++){
-            data[0] = ProductInformation.cartItem.get(i).getBrand();
-            data[1] = ProductInformation.cartItem.get(i).getModel();
-            
-            model.addRow(data);
-            cartItemTable.setRowHeight(20);
-            total+=Integer.parseInt(cartItemTable.getValueAt(i, 2)+"");
-            
-        }
-        
-        billLabel.setText(String.valueOf(total));
-    }//GEN-LAST:event_cartButtonActionPerformed
-
-    private void cartButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cartButtonMouseClicked
-
-    private void cartButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseEntered
-        // TODO add your handling code here:
-        cartButton.setBackground(new Color(0, 137, 123));
-    }//GEN-LAST:event_cartButtonMouseEntered
-
-    private void cartButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseExited
-        // TODO add your handling code here:
-        cartButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_cartButtonMouseExited
-
-    private void cartButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMousePressed
-        // TODO add your handling code here:
-        cartButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_cartButtonMousePressed
-
-    private void cartButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseReleased
-        // TODO add your handling code here:
-        cartButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_cartButtonMouseReleased
-
     private void mobilesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseClicked
         // TODO add your handling code here:
         cardParentPanel.removeAll();
@@ -1548,22 +1465,22 @@ public class MainPage extends javax.swing.JFrame {
 
     private void mobilesButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseEntered
         // TODO add your handling code here:
-        mobilesButton.setBackground(new Color(0, 137, 123));
+        mobilesButton.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_mobilesButtonMouseEntered
 
     private void mobilesButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseExited
         // TODO add your handling code here:
-        mobilesButton.setBackground(new Color(0, 150, 136));
+        mobilesButton.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_mobilesButtonMouseExited
 
     private void mobilesButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMousePressed
         // TODO add your handling code here:
-        mobilesButton.setBackground(new Color(0, 77, 64));
+        mobilesButton.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_mobilesButtonMousePressed
 
     private void mobilesButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseReleased
         // TODO add your handling code here:
-        mobilesButton.setBackground(new Color(0, 150, 136));
+        mobilesButton.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_mobilesButtonMouseReleased
 
     
@@ -1613,22 +1530,22 @@ public class MainPage extends javax.swing.JFrame {
 
     private void kidsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMouseEntered
         // TODO add your handling code here:
-        kidsButton.setBackground(new Color(0, 137, 123));
+        kidsButton.setBackground(new Color(204, 0, 0));
     }//GEN-LAST:event_kidsButtonMouseEntered
 
     private void kidsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMouseExited
         // TODO add your handling code here:
-        kidsButton.setBackground(new Color(0, 150, 136));
+        kidsButton.setBackground(new Color(255, 0, 0));
     }//GEN-LAST:event_kidsButtonMouseExited
 
     private void kidsButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMousePressed
         // TODO add your handling code here:
-        kidsButton.setBackground(new Color(0, 77, 64));
+        kidsButton.setBackground(new Color(204, 0,0));
     }//GEN-LAST:event_kidsButtonMousePressed
 
     private void kidsButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMouseReleased
         // TODO add your handling code here:
-        kidsButton.setBackground(new Color(0, 150, 136));
+        kidsButton.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_kidsButtonMouseReleased
 
     private void kidsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kidsButtonActionPerformed
@@ -1883,8 +1800,8 @@ public class MainPage extends javax.swing.JFrame {
         }
         else{
             Date date = new Date();
-            JFrame da = new DeliveryAddress(logger, Integer.parseInt(billLabel.getText()), date.toString());
-            da.setVisible(true);
+           /* JFrame da = new DeliveryAddress(logger, Integer.parseInt(billLabel.getText()), date.toString());
+            da.setVisible(true);*/
         }
     }//GEN-LAST:event_buyButtonActionPerformed
 
@@ -1980,12 +1897,12 @@ public class MainPage extends javax.swing.JFrame {
 
     private void searchButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMousePressed
         // TODO add your handling code here:
-        searchButton.setBackground(new Color(0, 77, 64));
+        searchButton.setBackground(new Color(204, 0, 0));
     }//GEN-LAST:event_searchButtonMousePressed
 
     private void searchButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseReleased
         // TODO add your handling code here:
-        searchButton.setBackground(new Color(0, 121, 107));
+        searchButton.setBackground(new Color(255,0,0));
     }//GEN-LAST:event_searchButtonMouseReleased
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
@@ -2154,7 +2071,6 @@ public class MainPage extends javax.swing.JFrame {
     public static javax.swing.JLabel billLabel;
     private javax.swing.JButton buyButton;
     private javax.swing.JPanel cardParentPanel;
-    private javax.swing.JButton cartButton;
     public static javax.swing.JTable cartItemTable;
     private javax.swing.JPanel cartPanel;
     private javax.swing.JButton electronicsButton;

@@ -97,7 +97,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(1199, 699));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
@@ -134,9 +134,9 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 60));
 
-        jPanel4.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel4.setBackground(new java.awt.Color(255, 0, 0));
 
-        updateButton.setBackground(new java.awt.Color(0, 150, 136));
+        updateButton.setBackground(new java.awt.Color(255, 0, 0));
         updateButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         updateButton.setForeground(new java.awt.Color(255, 255, 255));
         updateButton.setText("Tambah");
@@ -169,7 +169,7 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
 
-        checkStockButton.setBackground(new java.awt.Color(0, 150, 136));
+        checkStockButton.setBackground(new java.awt.Color(255, 0, 0));
         checkStockButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         checkStockButton.setForeground(new java.awt.Color(255, 255, 255));
         checkStockButton.setText("Edit");
@@ -550,81 +550,6 @@ public class AdminPanel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void checkStockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkStockButtonActionPerformed
-            cardAdminParentLayout.removeAll();
-            cardAdminParentLayout.add(checkStockPanel);
-            cardAdminParentLayout.repaint();
-            cardAdminParentLayout.revalidate();
-            
-            DefaultTableModel model =  (DefaultTableModel) checkStockTable.getModel();
-            model.setRowCount(0);
-         
-            ArrayList<ProductList> list = ElectronicsDB.checkStock();
-        
-            Object data[] = new Object[4];
-        
-        for(int i=0; i<list.size(); i++){
-            data[0] = list.get(i).getBrand();
-            data[1] = list.get(i).getModel();
-            data[2] = list.get(i).getQty();
-            data[3] = "Electronics";
-            
-            model.addRow(data);
-        }
-        
-        list.clear();
-        
-        list = MobileDB.checkStock();
-        
-        for(int i=0; i<list.size(); i++){
-            data[0] = list.get(i).getBrand();
-            data[1] = list.get(i).getModel();
-            data[2] = list.get(i).getQty();
-            data[3] = "Mobiles";
-            
-            model.addRow(data);
-        }
-        
-        list.clear();
-        
-        list = KidsDB.checkStock();
-        
-        for(int i=0; i<list.size(); i++){
-            data[0] = list.get(i).getBrand();
-            data[1] = list.get(i).getModel();
-            data[2] = list.get(i).getQty();
-            data[3] = "Kids";
-            
-            model.addRow(data);
-        }
-            
-            
-    }//GEN-LAST:event_checkStockButtonActionPerformed
-
-    private void checkStockButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseReleased
-        // TODO add your handling code here:
-        checkStockButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_checkStockButtonMouseReleased
-
-    private void checkStockButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMousePressed
-        // TODO add your handling code here:
-        checkStockButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_checkStockButtonMousePressed
-
-    private void checkStockButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseExited
-        // TODO add your handling code here:
-        checkStockButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_checkStockButtonMouseExited
-
-    private void checkStockButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseEntered
-        // TODO add your handling code here:
-        checkStockButton.setBackground(new Color(0, 137, 123));
-    }//GEN-LAST:event_checkStockButtonMouseEntered
-
-    private void checkStockButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_checkStockButtonMouseClicked
-
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
             cardAdminParentLayout.removeAll();
             cardAdminParentLayout.add(updatePanel);
@@ -634,22 +559,22 @@ public class AdminPanel extends javax.swing.JFrame {
 
     private void updateButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseReleased
         // TODO add your handling code here:
-        updateButton.setBackground(new Color(0, 150, 136));
+        updateButton.setBackground(new Color(255, 0, 0));
     }//GEN-LAST:event_updateButtonMouseReleased
 
     private void updateButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMousePressed
         // TODO add your handling code here:
-        updateButton.setBackground(new Color(0, 77, 64));
+        updateButton.setBackground(new Color(204, 0, 0));
     }//GEN-LAST:event_updateButtonMousePressed
 
     private void updateButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseExited
         // TODO add your handling code here:
-        updateButton.setBackground(new Color(0, 150, 136));
+        updateButton.setBackground(new Color(255, 0, 0));
     }//GEN-LAST:event_updateButtonMouseExited
 
     private void updateButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseEntered
         // TODO add your handling code here:;
-        updateButton.setBackground(new Color(0, 137, 123));
+        updateButton.setBackground(new Color(204, 0, 0));
     }//GEN-LAST:event_updateButtonMouseEntered
 
     private void updateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseClicked
@@ -792,6 +717,80 @@ public class AdminPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
         BillingDB.deleteBillings();
     }//GEN-LAST:event_delEntry1ActionPerformed
+
+    private void checkStockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkStockButtonActionPerformed
+        cardAdminParentLayout.removeAll();
+        cardAdminParentLayout.add(checkStockPanel);
+        cardAdminParentLayout.repaint();
+        cardAdminParentLayout.revalidate();
+
+        DefaultTableModel model =  (DefaultTableModel) checkStockTable.getModel();
+        model.setRowCount(0);
+
+        ArrayList<ProductList> list = ElectronicsDB.checkStock();
+
+        Object data[] = new Object[4];
+
+        for(int i=0; i<list.size(); i++){
+            data[0] = list.get(i).getBrand();
+            data[1] = list.get(i).getModel();
+            data[2] = list.get(i).getQty();
+            data[3] = "Electronics";
+
+            model.addRow(data);
+        }
+
+        list.clear();
+
+        list = MobileDB.checkStock();
+
+        for(int i=0; i<list.size(); i++){
+            data[0] = list.get(i).getBrand();
+            data[1] = list.get(i).getModel();
+            data[2] = list.get(i).getQty();
+            data[3] = "Mobiles";
+
+            model.addRow(data);
+        }
+
+        list.clear();
+
+        list = KidsDB.checkStock();
+
+        for(int i=0; i<list.size(); i++){
+            data[0] = list.get(i).getBrand();
+            data[1] = list.get(i).getModel();
+            data[2] = list.get(i).getQty();
+            data[3] = "Kids";
+
+            model.addRow(data);
+        }
+
+    }//GEN-LAST:event_checkStockButtonActionPerformed
+
+    private void checkStockButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseReleased
+        // TODO add your handling code here:
+        checkStockButton.setBackground(new Color(255,0,0));
+    }//GEN-LAST:event_checkStockButtonMouseReleased
+
+    private void checkStockButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMousePressed
+        // TODO add your handling code here:
+        checkStockButton.setBackground(new Color(204,0,0));
+    }//GEN-LAST:event_checkStockButtonMousePressed
+
+    private void checkStockButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseExited
+        // TODO add your handling code here:
+        checkStockButton.setBackground(new Color(255,0,0));
+    }//GEN-LAST:event_checkStockButtonMouseExited
+
+    private void checkStockButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseEntered
+        // TODO add your handling code here:
+        checkStockButton.setBackground(new Color(204,0,0));
+    }//GEN-LAST:event_checkStockButtonMouseEntered
+
+    private void checkStockButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkStockButtonMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
