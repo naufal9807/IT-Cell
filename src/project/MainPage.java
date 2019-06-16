@@ -310,7 +310,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -324,7 +324,7 @@ public class MainPage extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -577,8 +577,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
-            }
+                "Poto", "Nama", "Merek", "Deskripsi"  }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -611,7 +610,10 @@ public class MainPage extends javax.swing.JFrame {
         homePanel.setLayout(homePanelLayout);
         homePanelLayout.setHorizontalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .addGroup(homePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
+                .addContainerGap())
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -626,8 +628,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
-            }
+                "Poto", "Nama", "Merek", "Deskripsi" }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -675,8 +676,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
-            }
+                "Poto", "Nama", "Merek", "Deskripsi"}
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -726,7 +726,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Product Name", "Model", "Price", "Quantity"
+                "Nama", "Merek", "Deskripsi"
             }
         ));
         cartItemTable.setEnabled(false);
@@ -795,7 +795,7 @@ public class MainPage extends javax.swing.JFrame {
         cartPanel.setLayout(cartPanelLayout);
         cartPanelLayout.setHorizontalGroup(
             cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addGap(0, 1207, Short.MAX_VALUE)
             .addGroup(cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -816,8 +816,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
-            }
+                "Poto", "Nama", "Merek", "Deskripsi"   }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -1086,7 +1085,7 @@ public class MainPage extends javax.swing.JFrame {
 
         signUpPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 770, 590));
 
-        jPanel5.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1105,7 +1104,7 @@ public class MainPage extends javax.swing.JFrame {
 
         signInPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel7.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jLabel17.setFont(new java.awt.Font("Roboto Light", 0, 30)); // NOI18N
@@ -1922,9 +1921,7 @@ public class MainPage extends javax.swing.JFrame {
 
         }
         else{
-//            Date date = new Date();
-//            JFrame da = new DeliveryAddress(logger, Integer.parseInt(billLabel.getText()), date.toString());
-//            da.setVisible(true);
+
         }
     }//GEN-LAST:event_buyButtonActionPerformed
 
