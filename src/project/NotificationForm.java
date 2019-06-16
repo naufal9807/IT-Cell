@@ -47,7 +47,7 @@ public class NotificationForm extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 150, 136), 2));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel7.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N

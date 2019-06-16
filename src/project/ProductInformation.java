@@ -60,7 +60,7 @@ public class ProductInformation extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
+        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
