@@ -20,7 +20,7 @@ public class ProductList {
     private String description;
     private String mimage;
 
-    public ProductList(String brand, String model, String description, String image) {
+    public ProductList(String brand, String model, int price, int qty, String description, String image) {
         this.brand = brand;
         this.model = model;
         this.price = price;

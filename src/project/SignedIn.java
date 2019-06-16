@@ -121,7 +121,7 @@ public class SignedIn extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel7.setBackground(new java.awt.Color(0, 150, 136));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N

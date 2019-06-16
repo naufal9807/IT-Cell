@@ -60,7 +60,7 @@ public class ProductInformation extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
@@ -282,7 +282,8 @@ public class ProductInformation extends javax.swing.JFrame {
         }
         else{
             int qty = Integer.parseInt(this.productQtyField.getText());
-            ProductList p = new ProductList(this.productInfoBrandName.getText(), this.productInfoModel.getText(), null, null);
+            ProductList p = new ProductList(this.productInfoBrandName.getText(), this.productInfoModel.getText(), qty*Integer.parseInt(this.productInfoPrice.getText()), 
+                                                Integer.parseInt(this.productQtyField.getText()), null, null);
             cartItem.add(p);
             JOptionPane.showMessageDialog(null, "Product added to cart!");
    

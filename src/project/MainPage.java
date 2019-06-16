@@ -232,12 +232,12 @@ public class MainPage extends javax.swing.JFrame {
         BackgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
         jPanel2.setPreferredSize(new java.awt.Dimension(1199, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("IT-Cell");
+        jLabel1.setText("Black Bengal Shopping");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -251,6 +251,7 @@ public class MainPage extends javax.swing.JFrame {
         jSeparator6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jSeparator6.setOpaque(true);
 
+        searchBar.setBackground(new java.awt.Color(0, 150, 136));
         searchBar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         searchBar.setForeground(new java.awt.Color(255, 255, 255));
         searchBar.setBorder(null);
@@ -265,7 +266,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        searchButton.setBackground(new java.awt.Color(255, 0, 0));
+        searchButton.setBackground(new java.awt.Color(0, 121, 107));
         searchButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Search_31px.png"))); // NOI18N
@@ -310,7 +311,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -324,7 +325,7 @@ public class MainPage extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -340,9 +341,9 @@ public class MainPage extends javax.swing.JFrame {
 
         BackgroundPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 60));
 
-        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel3.setBackground(new java.awt.Color(0, 150, 136));
 
-        newlyAdded.setBackground(new java.awt.Color(255, 0, 0));
+        newlyAdded.setBackground(new java.awt.Color(0, 150, 136));
         newlyAdded.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
         newlyAdded.setText("Newly Added");
@@ -374,7 +375,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        electronicsButton.setBackground(new java.awt.Color(255, 0, 0));
+        electronicsButton.setBackground(new java.awt.Color(0, 150, 136));
         electronicsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         electronicsButton.setForeground(new java.awt.Color(255, 255, 255));
         electronicsButton.setText("Electronics");
@@ -406,7 +407,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        accountButton.setBackground(new java.awt.Color(255, 0, 0));
+        accountButton.setBackground(new java.awt.Color(0, 150, 136));
         accountButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         accountButton.setForeground(new java.awt.Color(255, 255, 255));
         accountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Person_48px.png"))); // NOI18N
@@ -438,7 +439,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        cartButton.setBackground(new java.awt.Color(255, 0, 0));
+        cartButton.setBackground(new java.awt.Color(0, 150, 136));
         cartButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         cartButton.setForeground(new java.awt.Color(255, 255, 255));
         cartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_OpenCart_24px.png"))); // NOI18N
@@ -473,7 +474,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        mobilesButton.setBackground(new java.awt.Color(255, 0, 0));
+        mobilesButton.setBackground(new java.awt.Color(0, 150, 136));
         mobilesButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         mobilesButton.setForeground(new java.awt.Color(255, 255, 255));
         mobilesButton.setText("Mobiles");
@@ -505,7 +506,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        kidsButton.setBackground(new java.awt.Color(255, 0, 0));
+        kidsButton.setBackground(new java.awt.Color(0, 150, 136));
         kidsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         kidsButton.setForeground(new java.awt.Color(255, 255, 255));
         kidsButton.setText("Kids Corner");
@@ -550,7 +551,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 343, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
                 .addComponent(cartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -567,7 +568,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(newlyAdded, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        BackgroundPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1210, 50));
+        BackgroundPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1210, 50));
 
         cardParentPanel.setLayout(new java.awt.CardLayout());
 
@@ -577,7 +578,8 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Poto", "Nama", "Merek", "Deskripsi"  }
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+            }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -610,10 +612,7 @@ public class MainPage extends javax.swing.JFrame {
         homePanel.setLayout(homePanelLayout);
         homePanelLayout.setHorizontalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(homePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -628,7 +627,8 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Poto", "Nama", "Merek", "Deskripsi" }
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+            }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -676,7 +676,8 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Poto", "Nama", "Merek", "Deskripsi"}
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+            }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -726,7 +727,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama", "Merek", "Deskripsi"
+                "Product Name", "Model", "Price", "Quantity"
             }
         ));
         cartItemTable.setEnabled(false);
@@ -795,7 +796,7 @@ public class MainPage extends javax.swing.JFrame {
         cartPanel.setLayout(cartPanelLayout);
         cartPanelLayout.setHorizontalGroup(
             cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1207, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -816,7 +817,8 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Poto", "Nama", "Merek", "Deskripsi"   }
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+            }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
@@ -1085,7 +1087,7 @@ public class MainPage extends javax.swing.JFrame {
 
         signUpPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 770, 590));
 
-        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel5.setBackground(new java.awt.Color(0, 150, 136));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1104,7 +1106,7 @@ public class MainPage extends javax.swing.JFrame {
 
         signInPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel7.setBackground(new java.awt.Color(0, 150, 136));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jLabel17.setFont(new java.awt.Font("Roboto Light", 0, 30)); // NOI18N
@@ -1921,7 +1923,9 @@ public class MainPage extends javax.swing.JFrame {
 
         }
         else{
-
+            Date date = new Date();
+            JFrame da = new DeliveryAddress(logger, Integer.parseInt(billLabel.getText()), date.toString());
+            da.setVisible(true);
         }
     }//GEN-LAST:event_buyButtonActionPerformed
 

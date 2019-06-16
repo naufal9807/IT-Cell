@@ -35,7 +35,7 @@ public class Search {
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getString("mdescription"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 electronics++;
                 
@@ -53,7 +53,7 @@ public class Search {
             
             while(rs.next()){
                 gl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getString("mdescription"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 mobile++;
                 list.add(gl);
@@ -70,7 +70,7 @@ public class Search {
             
             while(rs.next()){
                 kl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getString("mdescription"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 kids++;
                 list.add(kl);

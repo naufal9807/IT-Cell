@@ -78,7 +78,7 @@ public class KidsDB {
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getString("mdescription"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 
                 list.add(pl);
@@ -102,7 +102,7 @@ public class KidsDB {
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getString("mdescription"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 
                 list.add(pl);
@@ -126,7 +126,7 @@ public class KidsDB {
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        null, null);
+                        0, rs.getInt("mquantity"),null, null);
                 
                 list.add(pl);
 
