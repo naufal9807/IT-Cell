@@ -153,14 +153,6 @@ public class MainPage extends javax.swing.JFrame {
         electronicsPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         electronicsTable = new javax.swing.JTable();
-        cartPanel = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        cartItemTable = new javax.swing.JTable();
-        billLabel = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        buyButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         mobilesPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         mobileTable = new javax.swing.JTable();
@@ -180,10 +172,8 @@ public class MainPage extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel13 = new javax.swing.JLabel();
-        jSeparator5 = new javax.swing.JSeparator();
         signUpCardNumberField = new javax.swing.JTextField();
         signUpPasswordField = new javax.swing.JPasswordField();
-        jLabel14 = new javax.swing.JLabel();
         signInButton = new javax.swing.JButton();
         showPassword = new javax.swing.JCheckBox();
         LogUpButton = new javax.swing.JButton();
@@ -278,9 +268,9 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Search");
+        jLabel3.setText("Cari");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -289,7 +279,7 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 366, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -302,7 +292,7 @@ public class MainPage extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -663,98 +653,6 @@ public class MainPage extends javax.swing.JFrame {
 
         cardParentPanel.add(electronicsPanel, "card4");
 
-        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-
-        cartItemTable.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        cartItemTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Product Name", "Model", "Price", "Quantity"
-            }
-        ));
-        cartItemTable.setEnabled(false);
-        cartItemTable.setGridColor(new java.awt.Color(255, 255, 255));
-        jScrollPane2.setViewportView(cartItemTable);
-
-        billLabel.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        billLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-
-        jLabel4.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        jLabel4.setText("Taka Only");
-
-        buyButton.setBackground(new java.awt.Color(0, 77, 64));
-        buyButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        buyButton.setForeground(new java.awt.Color(255, 255, 255));
-        buyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Buy_24px.png"))); // NOI18N
-        buyButton.setText("Buy");
-        buyButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buyButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        jLabel5.setText("Total Bill:");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(462, 462, 462)
-                .addComponent(billLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
-                .addComponent(buyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel8Layout.createSequentialGroup()
-                    .addGap(377, 377, 377)
-                    .addComponent(jLabel5)
-                    .addContainerGap(746, Short.MAX_VALUE)))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(billLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(buyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(50, 50, 50))
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                    .addContainerGap(435, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(49, 49, 49)))
-        );
-
-        javax.swing.GroupLayout cartPanelLayout = new javax.swing.GroupLayout(cartPanel);
-        cartPanel.setLayout(cartPanelLayout);
-        cartPanelLayout.setHorizontalGroup(
-            cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1207, Short.MAX_VALUE)
-            .addGroup(cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        cartPanelLayout.setVerticalGroup(
-            cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
-            .addGroup(cartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(cartPanelLayout.createSequentialGroup()
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 40, Short.MAX_VALUE)))
-        );
-
-        cardParentPanel.add(cartPanel, "card8");
-
         mobileTable.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         mobileTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -923,14 +821,8 @@ public class MainPage extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel13.setText("Already a member?");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
-
-        jSeparator5.setBackground(new java.awt.Color(0, 77, 64));
-        jSeparator5.setForeground(new java.awt.Color(0, 77, 64));
-        jSeparator5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jSeparator5.setOpaque(true);
-        jPanel4.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 310, 2));
+        jLabel13.setText(" Sudah Punya Akun ?");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, -1, 20));
 
         signUpCardNumberField.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         signUpCardNumberField.setForeground(new java.awt.Color(0, 77, 64));
@@ -940,22 +832,17 @@ public class MainPage extends javax.swing.JFrame {
                 signUpCardNumberFieldActionPerformed(evt);
             }
         });
-        jPanel4.add(signUpCardNumberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 310, 50));
+        jPanel4.add(signUpCardNumberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 450, 310, 50));
 
         signUpPasswordField.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         signUpPasswordField.setForeground(new java.awt.Color(0, 77, 64));
         signUpPasswordField.setBorder(null);
         jPanel4.add(signUpPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 310, 50));
 
-        jLabel14.setFont(new java.awt.Font("Roboto", 0, 15)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel14.setText("Card No.(Optional)");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
-
         signInButton.setBackground(new java.awt.Color(255, 255, 255));
         signInButton.setFont(new java.awt.Font("Roboto", 1, 15)); // NOI18N
-        signInButton.setForeground(new java.awt.Color(204, 0, 0));
-        signInButton.setText("Sign In.");
+        signInButton.setForeground(new java.awt.Color(255, 0, 0));
+        signInButton.setText("Log In");
         signInButton.setToolTipText("Sign In with your existed credentials.");
         signInButton.setBorder(null);
         signInButton.setBorderPainted(false);
@@ -981,7 +868,7 @@ public class MainPage extends javax.swing.JFrame {
                 signInButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(signInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 502, 90, 30));
+        jPanel4.add(signInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 90, 40));
 
         showPassword.setBackground(new java.awt.Color(255, 255, 255));
         showPassword.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -997,18 +884,18 @@ public class MainPage extends javax.swing.JFrame {
         });
         jPanel4.add(showPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 20, 20));
 
-        LogUpButton.setBackground(new java.awt.Color(0, 77, 64));
+        LogUpButton.setBackground(new java.awt.Color(0, 153, 255));
         LogUpButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         LogUpButton.setForeground(new java.awt.Color(255, 255, 255));
         LogUpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Checked_24px.png"))); // NOI18N
-        LogUpButton.setText("Sign Up");
+        LogUpButton.setText("DAFTAR");
         LogUpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LogUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogUpButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(LogUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 140, 50));
+        jPanel4.add(LogUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, 140, 50));
 
         signUpUsernameField.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         signUpUsernameField.setForeground(new java.awt.Color(0, 77, 64));
@@ -1031,7 +918,7 @@ public class MainPage extends javax.swing.JFrame {
 
         signUpPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 770, 590));
 
-        jPanel5.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1050,7 +937,7 @@ public class MainPage extends javax.swing.JFrame {
 
         signInPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel7.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jLabel17.setFont(new java.awt.Font("Roboto Light", 0, 30)); // NOI18N
@@ -1132,31 +1019,31 @@ public class MainPage extends javax.swing.JFrame {
 
         jLabel21.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel21.setText("Haven't signed up?");
-        jPanel6.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
+        jLabel21.setText("Belum punya Akun ?");
+        jPanel6.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, -1, 20));
 
         signInPasswordField.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         signInPasswordField.setForeground(new java.awt.Color(0, 77, 64));
         signInPasswordField.setBorder(null);
         jPanel6.add(signInPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 310, 50));
 
-        LogInButton.setBackground(new java.awt.Color(0, 77, 64));
+        LogInButton.setBackground(new java.awt.Color(0, 102, 255));
         LogInButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         LogInButton.setForeground(new java.awt.Color(255, 255, 255));
         LogInButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Login_24px.png"))); // NOI18N
-        LogInButton.setText("Sign In");
+        LogInButton.setText("LOG IN");
         LogInButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LogInButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogInButtonActionPerformed(evt);
             }
         });
-        jPanel6.add(LogInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 130, 50));
+        jPanel6.add(LogInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, 130, 50));
 
         signUpButton.setBackground(new java.awt.Color(255, 255, 255));
         signUpButton.setFont(new java.awt.Font("Roboto", 1, 15)); // NOI18N
-        signUpButton.setForeground(new java.awt.Color(204, 0, 0));
-        signUpButton.setText("Sign Up now.");
+        signUpButton.setForeground(new java.awt.Color(255, 0, 0));
+        signUpButton.setText("Daftar Sekarang");
         signUpButton.setToolTipText("Sign In with your existed credentials.");
         signUpButton.setBorderPainted(false);
         signUpButton.setContentAreaFilled(false);
@@ -1181,7 +1068,7 @@ public class MainPage extends javax.swing.JFrame {
                 signUpButtonActionPerformed(evt);
             }
         });
-        jPanel6.add(signUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 502, 130, 30));
+        jPanel6.add(signUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 160, 40));
 
         showPassword1.setBackground(new java.awt.Color(255, 255, 255));
         showPassword1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -1629,22 +1516,22 @@ public class MainPage extends javax.swing.JFrame {
 
     private void signUpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseEntered
         // TODO add your handling code here:
-        signUpButton.setForeground(new Color(48, 79, 254));
+        signUpButton.setForeground(new Color(255,0,153));
     }//GEN-LAST:event_signUpButtonMouseEntered
 
     private void signUpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseExited
         // TODO add your handling code here:
-        signUpButton.setForeground(new Color(0, 150, 136));
+        signUpButton.setForeground(new Color(255,0,0));
     }//GEN-LAST:event_signUpButtonMouseExited
 
     private void signUpButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMousePressed
         // TODO add your handling code here:
-        signUpButton.setForeground(new Color(0, 77, 64));
+        signUpButton.setForeground(new Color(255,0,153));
     }//GEN-LAST:event_signUpButtonMousePressed
 
     private void signUpButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseReleased
         // TODO add your handling code here:
-        signUpButton.setForeground(new Color(0, 150, 136));
+        signUpButton.setForeground(new Color(255,0,0));
     }//GEN-LAST:event_signUpButtonMouseReleased
 
     private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
@@ -1726,27 +1613,23 @@ public class MainPage extends javax.swing.JFrame {
 
     private void signInButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInButtonMouseReleased
         // TODO add your handling code here:
-        signInButton.setForeground(new Color(0, 150, 136));
+        signInButton.setForeground(new Color(255,0,0));
     }//GEN-LAST:event_signInButtonMouseReleased
 
     private void signInButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInButtonMousePressed
         // TODO add your handling code here:
-        signInButton.setForeground(new Color(0, 77, 64));
+        signInButton.setForeground(new Color(255,0,153));
     }//GEN-LAST:event_signInButtonMousePressed
 
     private void signInButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInButtonMouseExited
         // TODO add your handling code here:
-        signInButton.setForeground(new Color(0, 150, 136));
+        signInButton.setForeground(new Color(255,0,0));
     }//GEN-LAST:event_signInButtonMouseExited
 
     private void signInButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInButtonMouseEntered
         // TODO add your handling code here:
-        signInButton.setForeground(new Color(48, 79, 254));
+        signInButton.setForeground(new Color(255,0,153));
     }//GEN-LAST:event_signInButtonMouseEntered
-
-    private void signUpCardNumberFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpCardNumberFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_signUpCardNumberFieldActionPerformed
 
     private void signUpEmailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpEmailFieldActionPerformed
         // TODO add your handling code here:
@@ -1776,24 +1659,6 @@ public class MainPage extends javax.swing.JFrame {
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
     }//GEN-LAST:event_mobileTableMouseClicked
-
-    private void buyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyButtonActionPerformed
-        // TODO add your handling code here:
-        if(!signInStatus){
-        cardParentPanel.removeAll();
-        cardParentPanel.add(signInPanel);
-        cardParentPanel.repaint();
-        cardParentPanel.revalidate();
-        
-        warningLabel.setText("Please Sign In first.");
-
-        }
-        else{
-            Date date = new Date();
-           /* JFrame da = new DeliveryAddress(logger, Integer.parseInt(billLabel.getText()), date.toString());
-            da.setVisible(true);*/
-        }
-    }//GEN-LAST:event_buyButtonActionPerformed
 
     private void warningLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warningLabelActionPerformed
         // TODO add your handling code here:
@@ -1887,12 +1752,12 @@ public class MainPage extends javax.swing.JFrame {
 
     private void searchButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMousePressed
         // TODO add your handling code here:
-        searchButton.setBackground(new Color(204, 0, 0));
+        searchButton.setBackground(new Color(255, 0, 0));
     }//GEN-LAST:event_searchButtonMousePressed
 
     private void searchButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseReleased
         // TODO add your handling code here:
-        searchButton.setBackground(new Color(255,0,0));
+        searchButton.setBackground(new Color(204,0,0));
     }//GEN-LAST:event_searchButtonMouseReleased
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
@@ -2010,6 +1875,10 @@ public class MainPage extends javax.swing.JFrame {
         
     }//GEN-LAST:event_searchTableMouseClicked
 
+    private void signUpCardNumberFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpCardNumberFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signUpCardNumberFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2058,11 +1927,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton LogInButton;
     private javax.swing.JButton LogUpButton;
     private javax.swing.JButton accountButton;
-    public static javax.swing.JLabel billLabel;
-    private javax.swing.JButton buyButton;
     private javax.swing.JPanel cardParentPanel;
-    public static javax.swing.JTable cartItemTable;
-    private javax.swing.JPanel cartPanel;
     private javax.swing.JButton electronicsButton;
     private javax.swing.JPanel electronicsPanel;
     private javax.swing.JTable electronicsTable;
@@ -2073,7 +1938,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -2082,8 +1946,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -2093,9 +1955,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -2104,7 +1964,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
