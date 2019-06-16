@@ -701,7 +701,7 @@ public class AdminPanel extends javax.swing.JFrame {
         if(delUpdateCat.getSelectedItem().equals("Berita")){
             ElectronicsDB.delete(del);
         }
-        else if(delUpdateCat.getSelectedItem().equals("Mobiles")){
+        else if(delUpdateCat.getSelectedItem().equals("Mobile")){
             MobileDB.delete(del);
         }
         else if(delUpdateCat.getSelectedItem().equals("Tips")){
