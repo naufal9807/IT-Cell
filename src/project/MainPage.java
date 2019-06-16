@@ -810,7 +810,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Features", "Photo"
+                "Judul", "Author", "Isi", "Photo"
             }
         ) {
             Class[] types = new Class[]{
