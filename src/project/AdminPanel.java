@@ -363,7 +363,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel11.setText("Add to Stock:");
+        jLabel11.setText("Edit Konte:");
 
         stockUpdateModel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         stockUpdateModel.addActionListener(new java.awt.event.ActionListener() {
@@ -379,7 +379,7 @@ public class AdminPanel extends javax.swing.JFrame {
         updateStockButton.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         updateStockButton.setForeground(new java.awt.Color(255, 255, 255));
         updateStockButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Up_24px.png"))); // NOI18N
-        updateStockButton.setText("Update Stock");
+        updateStockButton.setText("EDIT");
         updateStockButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateStockButtonActionPerformed(evt);
@@ -458,7 +458,7 @@ public class AdminPanel extends javax.swing.JFrame {
                         .addComponent(stockUpdateSetNama, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26)
                 .addComponent(updateStockButton)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         checkStockPanelLayout.setVerticalGroup(
             checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
