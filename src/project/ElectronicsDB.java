@@ -115,7 +115,7 @@ public class ElectronicsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, FROM electronics");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel FROM electronics");
             
             ProductList pl;
             
