@@ -46,7 +46,7 @@ public class ErrorOccured extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(440, 309));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel8.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel8.setBackground(new java.awt.Color(255, 0, 0));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
