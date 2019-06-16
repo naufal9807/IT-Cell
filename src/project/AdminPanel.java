@@ -85,10 +85,6 @@ public class AdminPanel extends javax.swing.JFrame {
         delUpdateCat = new javax.swing.JComboBox<String>();
         jLabel14 = new javax.swing.JLabel();
         stockUpdateSetNama = new javax.swing.JTextField();
-        billingPanel = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        billingTable = new javax.swing.JTable();
-        delEntry1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -358,11 +354,9 @@ public class AdminPanel extends javax.swing.JFrame {
         jScrollPane3.setViewportView(checkStockTable);
 
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 77, 64));
         jLabel10.setText("Masukkan ID:");
 
-        jLabel11.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 77, 64));
+        jLabel11.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel11.setText("Edit Konten:");
 
         stockUpdateModel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -390,14 +384,14 @@ public class AdminPanel extends javax.swing.JFrame {
         delEntry.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         delEntry.setForeground(new java.awt.Color(255, 255, 255));
         delEntry.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Delete_24px.png"))); // NOI18N
-        delEntry.setText("Delete Entry");
+        delEntry.setText("Delete");
         delEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 delEntryActionPerformed(evt);
             }
         });
 
-        jLabel12.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
         jLabel12.setText("Hapus Konten:");
 
@@ -416,7 +410,6 @@ public class AdminPanel extends javax.swing.JFrame {
         delUpdateCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Berita", "Mobile", "Tips" }));
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 77, 64));
         jLabel14.setText("Ubah Nama:");
 
         stockUpdateSetNama.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -434,31 +427,31 @@ public class AdminPanel extends javax.swing.JFrame {
             .addGroup(checkStockPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
+                .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(stockUpdateModel, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delEntryModel, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(checkStockPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addGap(5, 5, 5)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(delEntryModel, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(delUpdateCat, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(delEntry, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(checkStockPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(stockUpdateModel, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
                         .addComponent(stockStatusCat, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(stockUpdateSetNama, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(checkStockPanelLayout.createSequentialGroup()
+                        .addComponent(delUpdateCat, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(delEntry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(stockUpdateSetNama, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(updateStockButton)
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         checkStockPanelLayout.setVerticalGroup(
             checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -478,61 +471,17 @@ public class AdminPanel extends javax.swing.JFrame {
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(stockUpdateSetNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(updateStockButton))))
-                .addGap(27, 27, 27)
-                .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(delEntryModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(delUpdateCat, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(delEntry)))
-                .addGap(0, 36, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addGroup(checkStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delEntryModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delUpdateCat, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(delEntry))
+                .addGap(0, 38, Short.MAX_VALUE))
         );
 
         cardAdminParentLayout.add(checkStockPanel, "card4");
-
-        billingTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Serial", "Username", "Total Bill", "Time & Date"
-            }
-        ));
-        jScrollPane2.setViewportView(billingTable);
-
-        delEntry1.setBackground(new java.awt.Color(255, 0, 0));
-        delEntry1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        delEntry1.setForeground(new java.awt.Color(255, 255, 255));
-        delEntry1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Delete_24px.png"))); // NOI18N
-        delEntry1.setText("Delete Log");
-        delEntry1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                delEntry1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout billingPanelLayout = new javax.swing.GroupLayout(billingPanel);
-        billingPanel.setLayout(billingPanelLayout);
-        billingPanelLayout.setHorizontalGroup(
-            billingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
-            .addGroup(billingPanelLayout.createSequentialGroup()
-                .addGap(457, 457, 457)
-                .addComponent(delEntry1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        billingPanelLayout.setVerticalGroup(
-            billingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(billingPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(delEntry1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
-        );
-
-        cardAdminParentLayout.add(billingPanel, "card2");
 
         jPanel3.add(cardAdminParentLayout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1200, 600));
 
@@ -713,11 +662,6 @@ public class AdminPanel extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_delEntryActionPerformed
 
-    private void delEntry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delEntry1ActionPerformed
-        // TODO add your handling code here:
-        BillingDB.deleteBillings();
-    }//GEN-LAST:event_delEntry1ActionPerformed
-
     private void checkStockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkStockButtonActionPerformed
         cardAdminParentLayout.removeAll();
         cardAdminParentLayout.add(checkStockPanel);
@@ -795,14 +739,11 @@ public class AdminPanel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LogInButton;
-    private javax.swing.JPanel billingPanel;
-    private javax.swing.JTable billingTable;
     private javax.swing.JPanel cardAdminParentLayout;
     private javax.swing.JButton checkStockButton;
     private javax.swing.JPanel checkStockPanel;
     private javax.swing.JTable checkStockTable;
     private javax.swing.JButton delEntry;
-    private javax.swing.JButton delEntry1;
     private javax.swing.JTextField delEntryModel;
     private javax.swing.JComboBox<String> delUpdateCat;
     private javax.swing.JLabel jLabel1;
@@ -821,7 +762,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField mBrand;
