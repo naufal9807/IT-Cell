@@ -47,7 +47,7 @@ public class KidsDB {
          try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             
-            PreparedStatement ps = con.prepareStatement("UPDATE kids SET mquantity=? WHERE id=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE kids SET mbrand=? WHERE id=?");
             
             ps.setString(1, brand);
             ps.setString(2, model);

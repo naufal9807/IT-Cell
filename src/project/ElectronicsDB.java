@@ -27,7 +27,7 @@ public class ElectronicsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
          
-            PreparedStatement ps = con.prepareStatement("INSERT INTO electronics(mbrand, mmodel,mdescription, mphoto) VALUES(?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO electronics(mbrand, mmodel,mdescription, mphoto) VALUES(?,?,?,?)");
             
             ps.setString(1, brand);
             ps.setString(2, model);
