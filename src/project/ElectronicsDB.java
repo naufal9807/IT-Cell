@@ -5,6 +5,7 @@
  */
 package project;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -20,13 +21,13 @@ import javax.swing.JOptionPane;
  *
  * @author Void
  */
-public class MobileDB {
+public class ElectronicsDB {
     public static boolean flag = false;
-    public static void insertIntoMobileDB(String brand, String model, int price, int qty, String description, String imagePath){
+    public static void insertIntoElectronicsDB(String brand, String model, int price, int qty, String description, String imagePath){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
          
-            PreparedStatement ps = con.prepareStatement("INSERT INTO mobiles(mbrand, mmodel, mprice,"
+            PreparedStatement ps = con.prepareStatement("INSERT INTO electronics(mbrand, mmodel, mprice,"
                     + "mquantity, mdescription, mphoto) VALUES(?,?,?,?,?,?)");
             
             ps.setString(1, brand);
@@ -44,11 +45,11 @@ public class MobileDB {
     
     }
     
-    public static void updateMobileDB(String model, int qty){
+    public static void updateElectronicsDB(String model, int qty){
          try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             
-            PreparedStatement ps = con.prepareStatement("UPDATE mobiles SET mquantity=? WHERE mmodel=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE electronics SET mquantity=? WHERE mmodel=?");
             
             ps.setInt(1, qty);
             ps.setString(2, model);
@@ -68,9 +69,9 @@ public class MobileDB {
     public static ArrayList<ProductList> TableGenerator(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM mobiles");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM electronics");
             
             ProductList pl;
             
@@ -82,18 +83,19 @@ public class MobileDB {
                 list.add(pl);
 
             }
-
+            
         } catch (SQLException ex) {
             Logger.getLogger(MobileDB.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
 }
-    public static ArrayList<ProductList> homePageContent(){
+    
+   public static ArrayList<ProductList> homePageContent(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM mobiles ORDER BY id DESC LIMIT 3");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM electronics ORDER BY id DESC LIMIT 3");
             
             ProductList pl;
             
@@ -111,13 +113,12 @@ public class MobileDB {
         }
         return list;
    }
-    
-    public static ArrayList<ProductList> checkStock(){
+   public static ArrayList<ProductList> checkStock(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice, mquantity FROM mobiles");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice, mquantity FROM electronics");
             
             ProductList pl;
             
@@ -135,12 +136,12 @@ public class MobileDB {
         return list;
    }
     
-       public static void delete(String model){
+   public static void delete(String model){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
-            PreparedStatement ps = con.prepareStatement("DELETE FROM mobiles WHERE mmodel=?");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
+            PreparedStatement ps = con.prepareStatement("DELETE FROM electronics WHERE mmodel=?");
             ps.setString(1, model);
-           if(ps.executeUpdate()==0)
+            if(ps.executeUpdate()==0)
                 JOptionPane.showMessageDialog(null, "Entry does not exist!");
             else
                 JOptionPane.showMessageDialog(null, "Entry deleted successfully!");
@@ -150,7 +151,5 @@ public class MobileDB {
         }
             
    }
-    
-    
     
 }

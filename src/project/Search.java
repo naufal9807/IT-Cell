@@ -19,14 +19,14 @@ import java.util.logging.Logger;
  * @author Void
  */
 public class Search {
-    static int berita = 0;
+    static int electronics = 0;
     static int mobile = 0;
-    static int tips = 0;
+    static int kids = 0;
     public static ArrayList<ProductList> mobileSearch(String model){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = Koneksi.getConnection();
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM berita WHERE nama=? COLLATE NOCASE OR detail=? COLLATE NOCASE");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM electronics WHERE mbrand=? COLLATE NOCASE OR mmodel=? COLLATE NOCASE");
             ps.setString(1, model);
             ps.setString(2, model);
             ResultSet rs = ps.executeQuery();
@@ -34,42 +34,45 @@ public class Search {
             ProductList pl, gl, kl=null;
             
             while(rs.next()){
-                pl = new ProductList(rs.getString("nama"),rs.getString("detail"),
-                        rs.getString("deskripsi"),rs.getString("photo"));
-                berita++;
+                pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
+                        rs.getString("mphoto"));
+                electronics++;
                 
                 list.add(pl);
 
             }
             con.close();
             
-            con = Koneksi.getConnection();
-            ps = con.prepareStatement("SELECT * FROM mobiles WHERE nama=? COLLATE NOCASE OR detail=? COLLATE NOCASE");
+            con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
+            ps = con.prepareStatement("SELECT * FROM mobiles WHERE mbrand=? COLLATE NOCASE OR mmodel=? COLLATE NOCASE");
             ps.setString(1, model);
             ps.setString(2, model);
             rs = ps.executeQuery();
 
             
             while(rs.next()){
-                gl = new ProductList(rs.getString("nama"),rs.getString("detail"),
-                        rs.getString("mdescription"),rs.getString("mphoto"));
+                gl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
+                        rs.getString("mphoto"));
                 mobile++;
                 list.add(gl);
 
             }
             con.close();
             
-            con = Koneksi.getConnection();
-            ps = con.prepareStatement("SELECT * FROM tips WHERE nama=? COLLATE NOCASE OR detail=? COLLATE NOCASE");
+            con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
+            ps = con.prepareStatement("SELECT * FROM kids WHERE mbrand=? COLLATE NOCASE OR mmodel=? COLLATE NOCASE");
             ps.setString(1, model);
             ps.setString(2, model);
             rs = ps.executeQuery();
 
             
             while(rs.next()){
-                kl = new ProductList(rs.getString("nama"),rs.getString("detail"),
-                        rs.getString("deskripsi"),rs.getString("photo"));
-                tips++;
+                kl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
+                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
+                        rs.getString("mphoto"));
+                kids++;
                 list.add(kl);
 
             }

@@ -70,7 +70,7 @@ public class BillingDB {
             JOptionPane.showMessageDialog(null, "All entries have been deleted!");
             
         } catch (SQLException ex) {
-            Logger.getLogger(BeritaDB.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ElectronicsDB.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

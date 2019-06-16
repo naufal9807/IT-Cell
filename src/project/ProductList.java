@@ -13,49 +13,60 @@ import javax.swing.ImageIcon;
  * @author Void
  */
 public class ProductList {
-    private int ID;
-    private String nama;
-    private String detail;
-    private String deskripsi;
+    private String brand;
+    private String model;
+    private int price;
+    private int qty;
+    private String description;
     private String mimage;
 
-    public ProductList(String nama, String detail, String deskripsi, String image) {
-        this.nama = nama;
-        this.detail = detail;
-        this.deskripsi = deskripsi;
+    public ProductList(String brand, String model, int price, int qty, String description, String image) {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
+        this.qty = qty;
+        this.description = description;
         this.mimage = image;
     }
 
-    public int getID(){
-        return ID;
-    }
-    
-    public void setID(int ID){
-        this.ID = ID;
-    }
-    
-    public String getNama() {
-        return nama;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public String getDetail() {
-        return detail;
+    public String getModel() {
+        return model;
     }
 
-    public void setDetail(String detail) {
-        this.detail = detail;
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 
     public String getDescription() {
-        return deskripsi;
+        return description;
     }
 
-    public void setDescription(String deskripsi) {
-        this.deskripsi = deskripsi;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getMimage() {
@@ -66,4 +77,7 @@ public class ProductList {
     public void setMimage(String mimage) {
         this.mimage = mimage;
     }
+    
+    
+    
 }

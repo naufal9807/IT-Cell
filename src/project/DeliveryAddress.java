@@ -123,7 +123,7 @@ public class DeliveryAddress extends javax.swing.JFrame {
 
         jPanel2.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 53, 500, 310));
 
-        jPanel13.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel13.setBackground(new java.awt.Color(0, 150, 136));
 
         jLabel14.setBackground(new java.awt.Color(255, 255, 255));
         jLabel14.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -186,13 +186,26 @@ public class DeliveryAddress extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton closeButton;
     private javax.swing.JButton closeButton1;
     private javax.swing.JButton finalize;
+    private javax.swing.JButton getPasswordButton;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JTextField usernameField;
     private javax.swing.JTextField usernameField1;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,7 +35,7 @@ public class MainPage extends javax.swing.JFrame {
         
         //Adding last three entries from every categories in home
         
-        ArrayList<ProductList> list = BeritaDB.homePageContent();
+        ArrayList<ProductList> list = ElectronicsDB.homePageContent();
         
         Object rowData[] = new Object[6];
         
@@ -52,11 +52,13 @@ public class MainPage extends javax.swing.JFrame {
         model.setRowCount(0); //To clear mobileTable
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
-            ImageIcon ii = new ImageIcon(getClass().getResource("/products/berita/"+temp));
+            ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
@@ -78,9 +80,11 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
             Image resizedImage = ii.getImage();
@@ -93,7 +97,7 @@ public class MainPage extends javax.swing.JFrame {
         }
         list.clear();
         
-        list = TipsDB.homePageContent();
+        list = KidsDB.homePageContent();
         
         centerRenderer.setHorizontalAlignment( JLabel.CENTER );
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
@@ -103,11 +107,13 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
-            ImageIcon ii = new ImageIcon(getClass().getResource("/products/tips/"+temp));
+            ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
@@ -140,16 +146,18 @@ public class MainPage extends javax.swing.JFrame {
         BackgroundPanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
         searchBar = new javax.swing.JTextField();
         searchButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        home = new javax.swing.JButton();
-        reviewButton = new javax.swing.JButton();
+        newlyAdded = new javax.swing.JButton();
+        electronicsButton = new javax.swing.JButton();
         accountButton = new javax.swing.JButton();
-        newsButton = new javax.swing.JButton();
-        tipsButton = new javax.swing.JButton();
+        cartButton = new javax.swing.JButton();
+        mobilesButton = new javax.swing.JButton();
+        kidsButton = new javax.swing.JButton();
         cardParentPanel = new javax.swing.JPanel();
         homePanel = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -211,8 +219,10 @@ public class MainPage extends javax.swing.JFrame {
         signInUsernameField = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
+        jLabel21 = new javax.swing.JLabel();
         signInPasswordField = new javax.swing.JPasswordField();
         LogInButton = new javax.swing.JButton();
+        signUpButton = new javax.swing.JButton();
         showPassword1 = new javax.swing.JCheckBox();
         warningLabel = new javax.swing.JTextField();
 
@@ -222,23 +232,26 @@ public class MainPage extends javax.swing.JFrame {
         BackgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
         jPanel2.setPreferredSize(new java.awt.Dimension(1199, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("IT-Cell");
+        jLabel1.setText("Black Bengal Shopping");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
             }
         });
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Shopping_Bag_48px.png"))); // NOI18N
+
         jSeparator6.setForeground(new java.awt.Color(0, 77, 64));
         jSeparator6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jSeparator6.setOpaque(true);
 
-        searchBar.setBackground(new java.awt.Color(204, 204, 255));
+        searchBar.setBackground(new java.awt.Color(0, 150, 136));
         searchBar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         searchBar.setForeground(new java.awt.Color(255, 255, 255));
         searchBar.setBorder(null);
@@ -253,7 +266,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        searchButton.setBackground(new java.awt.Color(255, 0, 0));
+        searchButton.setBackground(new java.awt.Color(0, 121, 107));
         searchButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Search_31px.png"))); // NOI18N
@@ -294,9 +307,11 @@ public class MainPage extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 347, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -308,6 +323,7 @@ public class MainPage extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,73 +341,73 @@ public class MainPage extends javax.swing.JFrame {
 
         BackgroundPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 60));
 
-        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel3.setBackground(new java.awt.Color(0, 150, 136));
 
-        home.setBackground(new java.awt.Color(255, 0, 0));
-        home.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        home.setForeground(new java.awt.Color(255, 255, 255));
-        home.setText("Home");
-        home.setToolTipText("Check what's new!");
-        home.setBorderPainted(false);
-        home.setContentAreaFilled(false);
-        home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        home.setOpaque(true);
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
+        newlyAdded.setBackground(new java.awt.Color(0, 150, 136));
+        newlyAdded.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
+        newlyAdded.setText("Newly Added");
+        newlyAdded.setToolTipText("Check what's new!");
+        newlyAdded.setBorderPainted(false);
+        newlyAdded.setContentAreaFilled(false);
+        newlyAdded.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        newlyAdded.setOpaque(true);
+        newlyAdded.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeMouseClicked(evt);
+                newlyAddedMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                homeMouseEntered(evt);
+                newlyAddedMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                homeMouseExited(evt);
+                newlyAddedMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                homeMousePressed(evt);
+                newlyAddedMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                homeMouseReleased(evt);
+                newlyAddedMouseReleased(evt);
             }
         });
-        home.addActionListener(new java.awt.event.ActionListener() {
+        newlyAdded.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homeActionPerformed(evt);
+                newlyAddedActionPerformed(evt);
             }
         });
 
-        reviewButton.setBackground(new java.awt.Color(255, 0, 0));
-        reviewButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        reviewButton.setForeground(new java.awt.Color(255, 255, 255));
-        reviewButton.setText("Review");
-        reviewButton.setToolTipText("TV, Fridge, Electronic Devices");
-        reviewButton.setBorderPainted(false);
-        reviewButton.setContentAreaFilled(false);
-        reviewButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        reviewButton.setOpaque(true);
-        reviewButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        electronicsButton.setBackground(new java.awt.Color(0, 150, 136));
+        electronicsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        electronicsButton.setForeground(new java.awt.Color(255, 255, 255));
+        electronicsButton.setText("Electronics");
+        electronicsButton.setToolTipText("TV, Fridge, Electronic Devices");
+        electronicsButton.setBorderPainted(false);
+        electronicsButton.setContentAreaFilled(false);
+        electronicsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        electronicsButton.setOpaque(true);
+        electronicsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reviewButtonMouseClicked(evt);
+                electronicsButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                reviewButtonMouseEntered(evt);
+                electronicsButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                reviewButtonMouseExited(evt);
+                electronicsButtonMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                reviewButtonMousePressed(evt);
+                electronicsButtonMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                reviewButtonMouseReleased(evt);
+                electronicsButtonMouseReleased(evt);
             }
         });
-        reviewButton.addActionListener(new java.awt.event.ActionListener() {
+        electronicsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reviewButtonActionPerformed(evt);
+                electronicsButtonActionPerformed(evt);
             }
         });
 
-        accountButton.setBackground(new java.awt.Color(204, 204, 255));
+        accountButton.setBackground(new java.awt.Color(0, 150, 136));
         accountButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         accountButton.setForeground(new java.awt.Color(255, 255, 255));
         accountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Person_48px.png"))); // NOI18N
@@ -423,67 +439,102 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        newsButton.setBackground(new java.awt.Color(255, 0, 0));
-        newsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        newsButton.setForeground(new java.awt.Color(255, 255, 255));
-        newsButton.setText("News");
-        newsButton.setToolTipText("Latest mobiles available on store!");
-        newsButton.setBorderPainted(false);
-        newsButton.setContentAreaFilled(false);
-        newsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        newsButton.setOpaque(true);
-        newsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        cartButton.setBackground(new java.awt.Color(0, 150, 136));
+        cartButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        cartButton.setForeground(new java.awt.Color(255, 255, 255));
+        cartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_OpenCart_24px.png"))); // NOI18N
+        cartButton.setText("Cart");
+        cartButton.setToolTipText("View your cart.");
+        cartButton.setBorderPainted(false);
+        cartButton.setContentAreaFilled(false);
+        cartButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cartButton.setMaximumSize(new java.awt.Dimension(67, 49));
+        cartButton.setOpaque(true);
+        cartButton.setPreferredSize(new java.awt.Dimension(67, 49));
+        cartButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                newsButtonMouseClicked(evt);
+                cartButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                newsButtonMouseEntered(evt);
+                cartButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                newsButtonMouseExited(evt);
+                cartButtonMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                newsButtonMousePressed(evt);
+                cartButtonMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                newsButtonMouseReleased(evt);
+                cartButtonMouseReleased(evt);
             }
         });
-        newsButton.addActionListener(new java.awt.event.ActionListener() {
+        cartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newsButtonActionPerformed(evt);
+                cartButtonActionPerformed(evt);
             }
         });
 
-        tipsButton.setBackground(new java.awt.Color(255, 0, 0));
-        tipsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        tipsButton.setForeground(new java.awt.Color(255, 255, 255));
-        tipsButton.setText("Tips");
-        tipsButton.setToolTipText("Toys, Teddys and much more!");
-        tipsButton.setBorderPainted(false);
-        tipsButton.setContentAreaFilled(false);
-        tipsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tipsButton.setOpaque(true);
-        tipsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        mobilesButton.setBackground(new java.awt.Color(0, 150, 136));
+        mobilesButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        mobilesButton.setForeground(new java.awt.Color(255, 255, 255));
+        mobilesButton.setText("Mobiles");
+        mobilesButton.setToolTipText("Latest mobiles available on store!");
+        mobilesButton.setBorderPainted(false);
+        mobilesButton.setContentAreaFilled(false);
+        mobilesButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mobilesButton.setOpaque(true);
+        mobilesButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tipsButtonMouseClicked(evt);
+                mobilesButtonMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                tipsButtonMouseEntered(evt);
+                mobilesButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                tipsButtonMouseExited(evt);
+                mobilesButtonMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                tipsButtonMousePressed(evt);
+                mobilesButtonMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                tipsButtonMouseReleased(evt);
+                mobilesButtonMouseReleased(evt);
             }
         });
-        tipsButton.addActionListener(new java.awt.event.ActionListener() {
+        mobilesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tipsButtonActionPerformed(evt);
+                mobilesButtonActionPerformed(evt);
+            }
+        });
+
+        kidsButton.setBackground(new java.awt.Color(0, 150, 136));
+        kidsButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        kidsButton.setForeground(new java.awt.Color(255, 255, 255));
+        kidsButton.setText("Kids Corner");
+        kidsButton.setToolTipText("Toys, Teddys and much more!");
+        kidsButton.setBorderPainted(false);
+        kidsButton.setContentAreaFilled(false);
+        kidsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kidsButton.setOpaque(true);
+        kidsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                kidsButtonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                kidsButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                kidsButtonMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                kidsButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                kidsButtonMouseReleased(evt);
+            }
+        });
+        kidsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kidsButtonActionPerformed(evt);
             }
         });
 
@@ -493,14 +544,16 @@ public class MainPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(home)
+                .addComponent(newlyAdded)
+                .addGap(23, 23, 23)
+                .addComponent(electronicsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(reviewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(newsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(tipsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 544, Short.MAX_VALUE)
+                .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
+                .addComponent(cartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -508,13 +561,14 @@ public class MainPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(accountButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(reviewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(newsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(tipsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(electronicsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(newlyAdded, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        BackgroundPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1210, 50));
+        BackgroundPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1210, 50));
 
         cardParentPanel.setLayout(new java.awt.CardLayout());
 
@@ -524,7 +578,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama", "Detail", "Deskripsi", "Photo"
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
@@ -573,7 +627,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama", "Detail", "Deskripsi","Photo"
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
@@ -622,7 +676,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama", "Detail", "Deskripsi", "Photo"
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
@@ -650,26 +704,17 @@ public class MainPage extends javax.swing.JFrame {
                 electronicsTableMouseClicked(evt);
             }
         });
+        jScrollPane3.setViewportView(electronicsTable);
 
         javax.swing.GroupLayout electronicsPanelLayout = new javax.swing.GroupLayout(electronicsPanel);
         electronicsPanel.setLayout(electronicsPanelLayout);
         electronicsPanelLayout.setHorizontalGroup(
             electronicsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
-            .addGroup(electronicsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(electronicsPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(electronicsTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         electronicsPanelLayout.setVerticalGroup(
             electronicsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
-            .addGroup(electronicsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(electronicsPanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(electronicsTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         cardParentPanel.add(electronicsPanel, "card4");
@@ -821,7 +866,7 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama", "Detail", "Deskripsi", "Photo"
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
@@ -1141,6 +1186,11 @@ public class MainPage extends javax.swing.JFrame {
         jSeparator9.setOpaque(true);
         jPanel6.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 310, 2));
 
+        jLabel21.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 77, 64));
+        jLabel21.setText("Haven't signed up?");
+        jPanel6.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
+
         signInPasswordField.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         signInPasswordField.setForeground(new java.awt.Color(0, 77, 64));
         signInPasswordField.setBorder(null);
@@ -1158,6 +1208,36 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
         jPanel6.add(LogInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 130, 50));
+
+        signUpButton.setBackground(new java.awt.Color(255, 255, 255));
+        signUpButton.setFont(new java.awt.Font("Roboto", 1, 15)); // NOI18N
+        signUpButton.setForeground(new java.awt.Color(0, 150, 136));
+        signUpButton.setText("Sign Up now.");
+        signUpButton.setToolTipText("Sign In with your existed credentials.");
+        signUpButton.setBorderPainted(false);
+        signUpButton.setContentAreaFilled(false);
+        signUpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        signUpButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        signUpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                signUpButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                signUpButtonMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                signUpButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                signUpButtonMouseReleased(evt);
+            }
+        });
+        signUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signUpButtonActionPerformed(evt);
+            }
+        });
+        jPanel6.add(signUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 502, 130, 30));
 
         showPassword1.setBackground(new java.awt.Color(255, 255, 255));
         showPassword1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -1210,7 +1290,7 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
+    private void newlyAddedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newlyAddedActionPerformed
         // TODO add your handling code here:
         cardParentPanel.removeAll();
         cardParentPanel.add(homePanel);
@@ -1219,7 +1299,7 @@ public class MainPage extends javax.swing.JFrame {
         
         //Adding last three entries from every categories in home
         
-        ArrayList<ProductList> list = BeritaDB.homePageContent();
+        ArrayList<ProductList> list = ElectronicsDB.homePageContent();
         
         Object rowData[] = new Object[6];
         
@@ -1236,11 +1316,13 @@ public class MainPage extends javax.swing.JFrame {
         model.setRowCount(0); //To clear mobileTable
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
-            ImageIcon ii = new ImageIcon(getClass().getResource("/products/berita/"+temp));
+            ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
@@ -1262,9 +1344,11 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
             Image resizedImage = ii.getImage();
@@ -1277,7 +1361,7 @@ public class MainPage extends javax.swing.JFrame {
         }
         list.clear();
         
-        list = TipsDB.homePageContent();
+        list = KidsDB.homePageContent();
         
         centerRenderer.setHorizontalAlignment( JLabel.CENTER );
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
@@ -1287,11 +1371,13 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
-            ImageIcon ii = new ImageIcon(getClass().getResource("/products/tips/"+temp));
+            ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
@@ -1302,66 +1388,66 @@ public class MainPage extends javax.swing.JFrame {
         }
         
         
-    }//GEN-LAST:event_homeActionPerformed
+    }//GEN-LAST:event_newlyAddedActionPerformed
 
-    private void homeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseReleased
+    private void newlyAddedMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseReleased
         // TODO add your handling code here:
-        home.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_homeMouseReleased
+        newlyAdded.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_newlyAddedMouseReleased
 
-    private void homeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMousePressed
+    private void newlyAddedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMousePressed
         // TODO add your handling code here:
-        home.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_homeMousePressed
+        newlyAdded.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_newlyAddedMousePressed
 
-    private void homeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseExited
+    private void newlyAddedMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseExited
         // TODO add your handling code here:
-        home.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_homeMouseExited
+        newlyAdded.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_newlyAddedMouseExited
 
-    private void homeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseEntered
+    private void newlyAddedMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseEntered
         // TODO add your handling code here:;
-        home.setBackground(new Color(0, 137, 123));
+        newlyAdded.setBackground(new Color(0, 137, 123));
 
-    }//GEN-LAST:event_homeMouseEntered
+    }//GEN-LAST:event_newlyAddedMouseEntered
 
-    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
+    private void newlyAddedMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_homeMouseClicked
+    }//GEN-LAST:event_newlyAddedMouseClicked
 
-    private void reviewButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewButtonMouseClicked
+    private void electronicsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseClicked
         // TODO add your handling code here:
         cardParentPanel.removeAll();
         cardParentPanel.add(electronicsPanel);
         cardParentPanel.repaint();
         cardParentPanel.revalidate();
-    }//GEN-LAST:event_reviewButtonMouseClicked
+    }//GEN-LAST:event_electronicsButtonMouseClicked
 
-    private void reviewButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewButtonMouseEntered
+    private void electronicsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseEntered
         // TODO add your handling code here:
-         reviewButton.setBackground(new Color(0, 137, 123));
-    }//GEN-LAST:event_reviewButtonMouseEntered
+         electronicsButton.setBackground(new Color(0, 137, 123));
+    }//GEN-LAST:event_electronicsButtonMouseEntered
 
-    private void reviewButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewButtonMouseExited
+    private void electronicsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseExited
         // TODO add your handling code here:
-        reviewButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_reviewButtonMouseExited
+        electronicsButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_electronicsButtonMouseExited
 
-    private void reviewButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewButtonMousePressed
+    private void electronicsButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMousePressed
         // TODO add your handling code here:
-        reviewButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_reviewButtonMousePressed
+        electronicsButton.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_electronicsButtonMousePressed
 
-    private void reviewButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewButtonMouseReleased
+    private void electronicsButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseReleased
         // TODO add your handling code here:
-         reviewButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_reviewButtonMouseReleased
+         electronicsButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_electronicsButtonMouseReleased
 
-    private void reviewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reviewButtonActionPerformed
+    private void electronicsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_electronicsButtonActionPerformed
         // TODO add your handling code here:
-        ProductInformation.categoryChooser = "berita";
-        ArrayList<ProductList> list = BeritaDB.TableGenerator();
-        Object rowData[] = new Object[4];
+        ProductInformation.categoryChooser = "electronics";
+        ArrayList<ProductList> list = ElectronicsDB.TableGenerator();
+        Object rowData[] = new Object[6];
         
         DefaultTableModel model =  (DefaultTableModel) electronicsTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -1376,11 +1462,13 @@ public class MainPage extends javax.swing.JFrame {
         model.setRowCount(0); //To clear mobileTable
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
-            ImageIcon ii = new ImageIcon(getClass().getResource("/products/berita/"+temp));
+            ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
@@ -1389,7 +1477,7 @@ public class MainPage extends javax.swing.JFrame {
             electronicsTable.setRowHeight(150);
             electronicsTable.getColumnModel().getColumn(5).setPreferredWidth(150);
         }
-    }//GEN-LAST:event_reviewButtonActionPerformed
+    }//GEN-LAST:event_electronicsButtonActionPerformed
 
     private void accountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountButtonMouseClicked
         // TODO add your handling code here:
@@ -1420,7 +1508,7 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(signInStatus==false){
             cardParentPanel.removeAll();
-            cardParentPanel.add(signInPanel);
+            cardParentPanel.add(signUpPanel);
             cardParentPanel.repaint();
             cardParentPanel.revalidate();
         }
@@ -1431,36 +1519,86 @@ public class MainPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_accountButtonActionPerformed
 
-    private void newsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newsButtonMouseClicked
+    private void cartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartButtonActionPerformed
+        cardParentPanel.removeAll();
+        cardParentPanel.add(cartPanel);
+        cardParentPanel.repaint();
+        cardParentPanel.revalidate();
+        
+         DefaultTableModel model =  (DefaultTableModel) cartItemTable.getModel();
+         model.setRowCount(0);
+         total = 0;
+         tot = "";
+        
+        for(int i=0; i<ProductInformation.cartItem.size(); i++){
+            data[0] = ProductInformation.cartItem.get(i).getBrand();
+            data[1] = ProductInformation.cartItem.get(i).getModel();
+            data[2] = ProductInformation.cartItem.get(i).getPrice();
+            data[3] = ProductInformation.cartItem.get(i).getQty();
+            
+            model.addRow(data);
+            cartItemTable.setRowHeight(20);
+            total+=Integer.parseInt(cartItemTable.getValueAt(i, 2)+"");
+            
+        }
+        
+        billLabel.setText(String.valueOf(total));
+    }//GEN-LAST:event_cartButtonActionPerformed
+
+    private void cartButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cartButtonMouseClicked
+
+    private void cartButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseEntered
+        // TODO add your handling code here:
+        cartButton.setBackground(new Color(0, 137, 123));
+    }//GEN-LAST:event_cartButtonMouseEntered
+
+    private void cartButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseExited
+        // TODO add your handling code here:
+        cartButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_cartButtonMouseExited
+
+    private void cartButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMousePressed
+        // TODO add your handling code here:
+        cartButton.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_cartButtonMousePressed
+
+    private void cartButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cartButtonMouseReleased
+        // TODO add your handling code here:
+        cartButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_cartButtonMouseReleased
+
+    private void mobilesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseClicked
         // TODO add your handling code here:
         cardParentPanel.removeAll();
         cardParentPanel.add(mobilesPanel);
         cardParentPanel.repaint();
         cardParentPanel.revalidate();
-    }//GEN-LAST:event_newsButtonMouseClicked
+    }//GEN-LAST:event_mobilesButtonMouseClicked
 
-    private void newsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newsButtonMouseEntered
+    private void mobilesButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseEntered
         // TODO add your handling code here:
-        newsButton.setBackground(new Color(0, 137, 123));
-    }//GEN-LAST:event_newsButtonMouseEntered
+        mobilesButton.setBackground(new Color(0, 137, 123));
+    }//GEN-LAST:event_mobilesButtonMouseEntered
 
-    private void newsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newsButtonMouseExited
+    private void mobilesButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseExited
         // TODO add your handling code here:
-        newsButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_newsButtonMouseExited
+        mobilesButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_mobilesButtonMouseExited
 
-    private void newsButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newsButtonMousePressed
+    private void mobilesButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMousePressed
         // TODO add your handling code here:
-        newsButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_newsButtonMousePressed
+        mobilesButton.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_mobilesButtonMousePressed
 
-    private void newsButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newsButtonMouseReleased
+    private void mobilesButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mobilesButtonMouseReleased
         // TODO add your handling code here:
-        newsButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_newsButtonMouseReleased
+        mobilesButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_mobilesButtonMouseReleased
 
     
-    private void newsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newsButtonActionPerformed
+    private void mobilesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mobilesButtonActionPerformed
         // TODO add your handling code here:
         ProductInformation.categoryChooser = "mobiles";
         ArrayList<ProductList> list = MobileDB.TableGenerator();
@@ -1480,9 +1618,11 @@ public class MainPage extends javax.swing.JFrame {
         model.setRowCount(0); //To clear mobileTable
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
             Image resizedImage = ii.getImage();
@@ -1494,40 +1634,40 @@ public class MainPage extends javax.swing.JFrame {
             mobileTable.getColumnModel().getColumn(5).setPreferredWidth(150);
         }
         
-    }//GEN-LAST:event_newsButtonActionPerformed
+    }//GEN-LAST:event_mobilesButtonActionPerformed
 
-    private void tipsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsButtonMouseClicked
+    private void kidsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMouseClicked
         // TODO add your handling code here:
         cardParentPanel.removeAll();
         cardParentPanel.add(kidsPanel);
         cardParentPanel.repaint();
         cardParentPanel.revalidate();
-    }//GEN-LAST:event_tipsButtonMouseClicked
+    }//GEN-LAST:event_kidsButtonMouseClicked
 
-    private void tipsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsButtonMouseEntered
+    private void kidsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMouseEntered
         // TODO add your handling code here:
-        tipsButton.setBackground(new Color(0, 137, 123));
-    }//GEN-LAST:event_tipsButtonMouseEntered
+        kidsButton.setBackground(new Color(0, 137, 123));
+    }//GEN-LAST:event_kidsButtonMouseEntered
 
-    private void tipsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsButtonMouseExited
+    private void kidsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMouseExited
         // TODO add your handling code here:
-        tipsButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_tipsButtonMouseExited
+        kidsButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_kidsButtonMouseExited
 
-    private void tipsButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsButtonMousePressed
+    private void kidsButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMousePressed
         // TODO add your handling code here:
-        tipsButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_tipsButtonMousePressed
+        kidsButton.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_kidsButtonMousePressed
 
-    private void tipsButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsButtonMouseReleased
+    private void kidsButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kidsButtonMouseReleased
         // TODO add your handling code here:
-        tipsButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_tipsButtonMouseReleased
+        kidsButton.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_kidsButtonMouseReleased
 
-    private void tipsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipsButtonActionPerformed
+    private void kidsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kidsButtonActionPerformed
         // TODO add your handling code here:
-        ProductInformation.categoryChooser = "tips";
-        ArrayList<ProductList> list = TipsDB.TableGenerator();
+        ProductInformation.categoryChooser = "kids";
+        ArrayList<ProductList> list = KidsDB.TableGenerator();
         Object rowData[] = new Object[6];
         
         DefaultTableModel model =  (DefaultTableModel) kidsTable.getModel();
@@ -1543,11 +1683,13 @@ public class MainPage extends javax.swing.JFrame {
         model.setRowCount(0); //To clear mobileTable
         
         for(int i=0; i<list.size(); i++){
-            rowData[0] = list.get(i).getNama();
-            rowData[1] = list.get(i).getDetail();
-            rowData[2] = list.get(i).getDescription();
+            rowData[0] = list.get(i).getBrand();
+            rowData[1] = list.get(i).getModel();
+            rowData[2] = list.get(i).getPrice();
+            rowData[3] = list.get(i).getQty();
+            rowData[4] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
-            ImageIcon ii = new ImageIcon(getClass().getResource("/products/tips/"+temp));
+            ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
@@ -1557,7 +1699,7 @@ public class MainPage extends javax.swing.JFrame {
             kidsTable.getColumnModel().getColumn(5).setPreferredWidth(150);
         }
         
-    }//GEN-LAST:event_tipsButtonActionPerformed
+    }//GEN-LAST:event_kidsButtonActionPerformed
 
     private void signInUsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInUsernameFieldActionPerformed
         // TODO add your handling code here:
@@ -1614,6 +1756,34 @@ public class MainPage extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_LogInButtonActionPerformed
+
+    private void signUpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseEntered
+        // TODO add your handling code here:
+        signUpButton.setForeground(new Color(48, 79, 254));
+    }//GEN-LAST:event_signUpButtonMouseEntered
+
+    private void signUpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseExited
+        // TODO add your handling code here:
+        signUpButton.setForeground(new Color(0, 150, 136));
+    }//GEN-LAST:event_signUpButtonMouseExited
+
+    private void signUpButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMousePressed
+        // TODO add your handling code here:
+        signUpButton.setForeground(new Color(0, 77, 64));
+    }//GEN-LAST:event_signUpButtonMousePressed
+
+    private void signUpButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpButtonMouseReleased
+        // TODO add your handling code here:
+        signUpButton.setForeground(new Color(0, 150, 136));
+    }//GEN-LAST:event_signUpButtonMouseReleased
+
+    private void signUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpButtonActionPerformed
+        // TODO add your handling code here:
+        cardParentPanel.removeAll();
+        cardParentPanel.add(signUpPanel);
+        cardParentPanel.repaint();
+        cardParentPanel.revalidate();
+    }//GEN-LAST:event_signUpButtonActionPerformed
 
     private void showPassword1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPassword1ActionPerformed
         // TODO add your handling code here:
@@ -1735,6 +1905,8 @@ public class MainPage extends javax.swing.JFrame {
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
+        pi.productInfoPrice.setText(price);
+        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
     }//GEN-LAST:event_mobileTableMouseClicked
@@ -1778,6 +1950,8 @@ public class MainPage extends javax.swing.JFrame {
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
+        pi.productInfoPrice.setText(price);
+        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
     }//GEN-LAST:event_electronicsTableMouseClicked
@@ -1799,6 +1973,8 @@ public class MainPage extends javax.swing.JFrame {
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
+        pi.productInfoPrice.setText(price);
+        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
     }//GEN-LAST:event_kidsTableMouseClicked
@@ -1808,11 +1984,11 @@ public class MainPage extends javax.swing.JFrame {
         int rowIndex = homeTable.getSelectedRow();
         
         if(rowIndex<=2)
-            ProductInformation.categoryChooser = "berita";
+            ProductInformation.categoryChooser = "electronics";
         else if(rowIndex>2 && rowIndex<=5)
             ProductInformation.categoryChooser = "mobiles";
         else 
-            ProductInformation.categoryChooser = "tips";
+            ProductInformation.categoryChooser = "kids";
         
         pi.setVisible(true);
         pi.pack();
@@ -1829,6 +2005,8 @@ public class MainPage extends javax.swing.JFrame {
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
+        pi.productInfoPrice.setText(price);
+        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
         
@@ -1866,9 +2044,9 @@ public class MainPage extends javax.swing.JFrame {
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
         //ProductInformation.categoryChooser = "mobiles";
-        Search.berita=0;
+        Search.electronics=0;
         Search.mobile=0;
-        Search.tips=0;
+        Search.kids=0;
         
         ArrayList<ProductList> list = Search.mobileSearch(searchBar.getText());
         Object rowData[] = new Object[6];
@@ -1877,7 +2055,7 @@ public class MainPage extends javax.swing.JFrame {
         
         if(searchBar.getText().equals(""))
             JOptionPane.showMessageDialog(null, "Search field empty!");
-        else if(Search.berita==0 && Search.mobile==0 && Search.tips==0)
+        else if(Search.electronics==0 && Search.mobile==0 && Search.kids==0)
             JOptionPane.showMessageDialog(null, "Sorry! Product does not exist!");
         else{
             cardParentPanel.removeAll();
@@ -1896,12 +2074,14 @@ public class MainPage extends javax.swing.JFrame {
 
 
             model.setRowCount(0);
-            for(i=0 ; i<Search.berita; i++){
-                rowData[0] = list.get(i).getNama();
-                rowData[1] = list.get(i).getDetail();
-                rowData[2] = list.get(i).getDescription();
+            for(i=0 ; i<Search.electronics; i++){
+                rowData[0] = list.get(i).getBrand();
+                rowData[1] = list.get(i).getModel();
+                rowData[2] = list.get(i).getPrice();
+                rowData[3] = list.get(i).getQty();
+                rowData[4] = list.get(i).getDescription();
                 String temp = list.get(i).getMimage();
-                ImageIcon ii = new ImageIcon(getClass().getResource("/products/berita/"+temp));
+                ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
@@ -1910,11 +2090,13 @@ public class MainPage extends javax.swing.JFrame {
                 searchTable.setRowHeight(150);
                 searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
             }
-            for(k=i; k<Search.mobile+Search.berita; k++){
-                rowData[0] = list.get(i).getNama();
-                rowData[1] = list.get(i).getDetail();
-                rowData[2] = list.get(i).getDescription();
-                String temp = list.get(i).getMimage();
+            for(k=i; k<Search.mobile+Search.electronics; k++){
+                rowData[0] = list.get(k).getBrand();
+                rowData[1] = list.get(k).getModel();
+                rowData[2] = list.get(k).getPrice();
+                rowData[3] = list.get(k).getQty();
+                rowData[4] = list.get(k).getDescription();
+                String temp = list.get(k).getMimage();
                 ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
@@ -1925,12 +2107,14 @@ public class MainPage extends javax.swing.JFrame {
                 searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
             }
             System.out.println();
-            for(j=k; j<Search.mobile+Search.berita+Search.tips; j++){
-                rowData[0] = list.get(i).getNama();
-                rowData[1] = list.get(i).getDetail();
-                rowData[2] = list.get(i).getDescription();
-                String temp = list.get(i).getMimage();
-                ImageIcon ii = new ImageIcon(getClass().getResource("/products/tips/"+temp));
+            for(j=k; j<Search.mobile+Search.electronics+Search.kids; j++){
+                rowData[0] = list.get(j).getBrand();
+                rowData[1] = list.get(j).getModel();
+                rowData[2] = list.get(j).getPrice();
+                rowData[3] = list.get(j).getQty();
+                rowData[4] = list.get(j).getDescription();
+                String temp = list.get(j).getMimage();
+                ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
@@ -1953,12 +2137,12 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         int rowIndex = searchTable.getSelectedRow();
         
-        if(Search.berita!=0 && rowIndex<Search.berita)
-            ProductInformation.categoryChooser = "berita";
-        else if(Search.mobile!=0 && rowIndex>=Search.berita && rowIndex<Search.berita+Search.mobile)
+        if(Search.electronics!=0 && rowIndex<Search.electronics)
+            ProductInformation.categoryChooser = "electronics";
+        else if(Search.mobile!=0 && rowIndex>=Search.electronics && rowIndex<Search.electronics+Search.mobile)
             ProductInformation.categoryChooser = "mobiles";
         else 
-            ProductInformation.categoryChooser = "tips";
+            ProductInformation.categoryChooser = "kids";
         
         pi.setVisible(true);
         pi.pack();
@@ -1975,6 +2159,8 @@ public class MainPage extends javax.swing.JFrame {
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
+        pi.productInfoPrice.setText(price);
+        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
         
@@ -2016,7 +2202,7 @@ public class MainPage extends javax.swing.JFrame {
 //            }
 //        });
         JFrame newMain = new MainPage();
-        newMain.setTitle("IT Cell");
+        newMain.setTitle("Black Bengal Shopping");
         newMain.setVisible(true);
         newMain.setResizable(false);
         
@@ -2033,12 +2219,13 @@ public class MainPage extends javax.swing.JFrame {
     public static javax.swing.JLabel billLabel;
     private javax.swing.JButton buyButton;
     private javax.swing.JPanel cardParentPanel;
+    private javax.swing.JButton cartButton;
     public static javax.swing.JTable cartItemTable;
     private javax.swing.JPanel cartPanel;
+    private javax.swing.JButton electronicsButton;
     private javax.swing.JPanel electronicsPanel;
     private javax.swing.JTable electronicsTable;
     private javax.swing.JLabel emptyField;
-    private javax.swing.JButton home;
     private javax.swing.JPanel homePanel;
     private javax.swing.JTable homeTable;
     private javax.swing.JLabel jLabel1;
@@ -2049,7 +2236,9 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
@@ -2079,12 +2268,13 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JButton kidsButton;
     private javax.swing.JPanel kidsPanel;
     private javax.swing.JTable kidsTable;
     private javax.swing.JTable mobileTable;
+    private javax.swing.JButton mobilesButton;
     private javax.swing.JPanel mobilesPanel;
-    private javax.swing.JButton newsButton;
-    private javax.swing.JButton reviewButton;
+    private javax.swing.JButton newlyAdded;
     private javax.swing.JTextField searchBar;
     private javax.swing.JButton searchButton;
     private javax.swing.JPanel searchPanel;
@@ -2095,13 +2285,13 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel signInPanel;
     private javax.swing.JPasswordField signInPasswordField;
     private javax.swing.JTextField signInUsernameField;
+    private javax.swing.JButton signUpButton;
     private javax.swing.JTextField signUpCardNumberField;
     private javax.swing.JTextField signUpEmailField;
     private javax.swing.JTextField signUpNameField;
     private javax.swing.JPanel signUpPanel;
     private javax.swing.JPasswordField signUpPasswordField;
     private javax.swing.JTextField signUpUsernameField;
-    private javax.swing.JButton tipsButton;
     private javax.swing.JLabel usernameExists;
     private javax.swing.JTextField warningLabel;
     // End of variables declaration//GEN-END:variables
