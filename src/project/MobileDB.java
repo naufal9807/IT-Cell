@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
  */
 public class MobileDB {
     public static boolean flag = false;
-    public static void insertIntoMobileDB(String brand, String model, int price, int qty, String description, String imagePath){
+    public static void insertIntoMobileDB(String brand, String model, String description, String imagePath){
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
          
@@ -31,10 +31,8 @@ public class MobileDB {
             
             ps.setString(1, brand);
             ps.setString(2, model);
-            ps.setInt(3, price);
-            ps.setInt(4, qty);
-            ps.setString(5, description);
-            ps.setString(6, imagePath);
+            ps.setString(3, description);
+            ps.setString(4, imagePath);
             if(ps.executeUpdate()==1)
                 JOptionPane.showMessageDialog(null, "Entry successful!");
             

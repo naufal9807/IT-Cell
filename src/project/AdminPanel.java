@@ -53,7 +53,6 @@ public class AdminPanel extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         updateButton = new javax.swing.JButton();
         checkStockButton = new javax.swing.JButton();
-        billingButton = new javax.swing.JButton();
         cardAdminParentLayout = new javax.swing.JPanel();
         updatePanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -62,18 +61,14 @@ public class AdminPanel extends javax.swing.JFrame {
         mBrand = new javax.swing.JTextField();
         mModel = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        mQty = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         mPhotoPath = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        mCat = new javax.swing.JComboBox<>();
+        mCat = new javax.swing.JComboBox<String>();
         jScrollPane1 = new javax.swing.JScrollPane();
         mDescription = new javax.swing.JTextArea();
         selectedPhoto = new javax.swing.JLabel();
         photoSelection = new javax.swing.JButton();
-        mPrice = new javax.swing.JTextField();
         LogInButton = new javax.swing.JButton();
         checkStockPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -81,13 +76,13 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         stockUpdateModel = new javax.swing.JTextField();
-        stockStatusCat = new javax.swing.JComboBox<>();
+        stockStatusCat = new javax.swing.JComboBox<String>();
         updateStockButton = new javax.swing.JButton();
         delEntry = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         delEntryModel = new javax.swing.JTextField();
-        delUpdateCat = new javax.swing.JComboBox<>();
+        delUpdateCat = new javax.swing.JComboBox<String>();
         jLabel14 = new javax.swing.JLabel();
         stockUpdateSetQty = new javax.swing.JTextField();
         billingPanel = new javax.swing.JPanel();
@@ -144,7 +139,7 @@ public class AdminPanel extends javax.swing.JFrame {
         updateButton.setBackground(new java.awt.Color(0, 150, 136));
         updateButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         updateButton.setForeground(new java.awt.Color(255, 255, 255));
-        updateButton.setText("New Entry");
+        updateButton.setText("Tambah");
         updateButton.setToolTipText("Enter new product");
         updateButton.setBorder(null);
         updateButton.setBorderPainted(false);
@@ -177,7 +172,7 @@ public class AdminPanel extends javax.swing.JFrame {
         checkStockButton.setBackground(new java.awt.Color(0, 150, 136));
         checkStockButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         checkStockButton.setForeground(new java.awt.Color(255, 255, 255));
-        checkStockButton.setText("Check Stock");
+        checkStockButton.setText("Edit");
         checkStockButton.setToolTipText("Stock status");
         checkStockButton.setBorder(null);
         checkStockButton.setBorderPainted(false);
@@ -207,39 +202,6 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
 
-        billingButton.setBackground(new java.awt.Color(0, 150, 136));
-        billingButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        billingButton.setForeground(new java.awt.Color(255, 255, 255));
-        billingButton.setText("Billing");
-        billingButton.setToolTipText("Total billings ");
-        billingButton.setBorder(null);
-        billingButton.setBorderPainted(false);
-        billingButton.setContentAreaFilled(false);
-        billingButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        billingButton.setOpaque(true);
-        billingButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                billingButtonMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                billingButtonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                billingButtonMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                billingButtonMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                billingButtonMouseReleased(evt);
-            }
-        });
-        billingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                billingButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -249,18 +211,14 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(checkStockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(billingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(740, Short.MAX_VALUE))
+                .addContainerGap(895, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(billingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(checkStockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(checkStockButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -315,20 +273,10 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel5.setText("Model:");
         updatePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 104, -1));
 
-        mQty.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        mQty.setForeground(new java.awt.Color(0, 77, 64));
-        mQty.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
-        mQty.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mQtyActionPerformed(evt);
-            }
-        });
-        updatePanel.add(mQty, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 110, -1));
-
         jLabel6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 77, 64));
         jLabel6.setText("Category:");
-        updatePanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 104, -1));
+        updatePanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 104, -1));
 
         mPhotoPath.setEditable(false);
         mPhotoPath.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -342,24 +290,14 @@ public class AdminPanel extends javax.swing.JFrame {
         });
         updatePanel.add(mPhotoPath, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 210, 30));
 
-        jLabel7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel7.setText("Price:");
-        updatePanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 104, -1));
-
-        jLabel8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel8.setText("Quantity:");
-        updatePanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 104, -1));
-
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 77, 64));
         jLabel9.setText("Product Description:");
-        updatePanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 140, -1));
+        updatePanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 140, -1));
 
         mCat.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        mCat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electronics", "Mobile", "Kids" }));
-        updatePanel.add(mCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
+        mCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Electronics", "Mobile", "Kids" }));
+        updatePanel.add(mCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
 
         mDescription.setColumns(20);
         mDescription.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -368,7 +306,7 @@ public class AdminPanel extends javax.swing.JFrame {
         mDescription.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 77, 64), 1, true));
         jScrollPane1.setViewportView(mDescription);
 
-        updatePanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 370, 190));
+        updatePanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 370, 190));
 
         selectedPhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         selectedPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Image_100px.png"))); // NOI18N
@@ -388,16 +326,6 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
         updatePanel.add(photoSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 340, 50, 30));
-
-        mPrice.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        mPrice.setForeground(new java.awt.Color(0, 77, 64));
-        mPrice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
-        mPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mPriceActionPerformed(evt);
-            }
-        });
-        updatePanel.add(mPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 180, -1));
 
         LogInButton.setBackground(new java.awt.Color(0, 77, 64));
         LogInButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
@@ -445,7 +373,7 @@ public class AdminPanel extends javax.swing.JFrame {
         });
 
         stockStatusCat.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        stockStatusCat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electronics", "Mobiles", "Kids" }));
+        stockStatusCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Electronics", "Mobiles", "Kids" }));
 
         updateStockButton.setBackground(new java.awt.Color(0, 77, 64));
         updateStockButton.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -485,7 +413,7 @@ public class AdminPanel extends javax.swing.JFrame {
         });
 
         delUpdateCat.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        delUpdateCat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electronics", "Mobiles", "Kids" }));
+        delUpdateCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Electronics", "Mobiles", "Kids" }));
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 77, 64));
@@ -622,55 +550,6 @@ public class AdminPanel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void billingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billingButtonActionPerformed
-        // TODO add your handling code here:
-            cardAdminParentLayout.removeAll();
-            cardAdminParentLayout.add(billingPanel);
-            cardAdminParentLayout.repaint();
-            cardAdminParentLayout.revalidate();
-            
-            DefaultTableModel model =  (DefaultTableModel) billingTable.getModel();
-            model.setRowCount(0);
-         
-            Object[] data = new Object[4];
-            ArrayList<BillObject> list = new ArrayList<>();
-            list = BillingDB.billlings();
-        
-        for(int i=0; i<list.size(); i++){
-            data[0] = i+1;
-            data[1] = list.get(i).getUname();
-            data[2] = list.get(i).getBill();
-            data[3] = list.get(i).getDate();
-            
-            model.addRow(data);
-            billingTable.setRowHeight(20);
-        }
-    }//GEN-LAST:event_billingButtonActionPerformed
-
-    private void billingButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseReleased
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_billingButtonMouseReleased
-
-    private void billingButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMousePressed
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_billingButtonMousePressed
-
-    private void billingButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseExited
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_billingButtonMouseExited
-
-    private void billingButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseEntered
-        // TODO add your handling code here:
-        billingButton.setBackground(new Color(0, 137, 123));
-    }//GEN-LAST:event_billingButtonMouseEntered
-
-    private void billingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billingButtonMouseClicked
-
-    }//GEN-LAST:event_billingButtonMouseClicked
-
     private void checkStockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkStockButtonActionPerformed
             cardAdminParentLayout.removeAll();
             cardAdminParentLayout.add(checkStockPanel);
@@ -789,10 +668,6 @@ public class AdminPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mModelActionPerformed
 
-    private void mQtyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mQtyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mQtyActionPerformed
-
     private void mPhotoPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mPhotoPathActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mPhotoPathActionPerformed
@@ -816,23 +691,17 @@ public class AdminPanel extends javax.swing.JFrame {
 
     }//GEN-LAST:event_photoSelectionActionPerformed
 
-    private void mPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mPriceActionPerformed
-
     private void LogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInButtonActionPerformed
         // TODO add your handling code here:
         try{
             if(mCat.getSelectedItem().equals("Mobile")){
             if(!path.equals(""))
-                MobileDB.insertIntoMobileDB(mBrand.getText(), mModel.getText(), Integer.parseInt(mPrice.getText()), 
-                        Integer.parseInt(mQty.getText()), mDescription.getText(), path);
+                MobileDB.insertIntoMobileDB(mBrand.getText(), mModel.getText(), mDescription.getText(), path);
         }
         
         else if(mCat.getSelectedItem().equals("Electronics")){
             if(!path.equals(""))
-                ElectronicsDB.insertIntoElectronicsDB(mBrand.getText(), mModel.getText(), Integer.parseInt(mPrice.getText()), 
-                        Integer.parseInt(mQty.getText()), mDescription.getText(), path);
+                ElectronicsDB.insertIntoElectronicsDB(mBrand.getText(), mModel.getText(), mDescription.getText(), path);
         }
         else if(mCat.getSelectedItem().equals("Kids")){
             if(!path.equals(""))
@@ -841,16 +710,14 @@ public class AdminPanel extends javax.swing.JFrame {
         
         mBrand.setText("");
         mModel.setText("");
-        mQty.setText("");
-        mPrice.setText("");
+
         mDescription.setText("");
         mPhotoPath.setText("");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
             mBrand.setText("");
             mModel.setText("");
-            mQty.setText("");
-            mPrice.setText("");
+
             mDescription.setText("");
             mPhotoPath.setText("");
         }
@@ -929,7 +796,6 @@ public class AdminPanel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LogInButton;
-    private javax.swing.JButton billingButton;
     private javax.swing.JPanel billingPanel;
     private javax.swing.JTable billingTable;
     private javax.swing.JPanel cardAdminParentLayout;
@@ -951,8 +817,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -966,8 +830,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JTextArea mDescription;
     private javax.swing.JTextField mModel;
     private javax.swing.JTextField mPhotoPath;
-    private javax.swing.JTextField mPrice;
-    private javax.swing.JTextField mQty;
     private javax.swing.JButton photoSelection;
     private javax.swing.JLabel selectedPhoto;
     private javax.swing.JComboBox<String> stockStatusCat;

@@ -23,19 +23,16 @@ import javax.swing.JOptionPane;
  */
 public class ElectronicsDB {
     public static boolean flag = false;
-    public static void insertIntoElectronicsDB(String brand, String model, int price, int qty, String description, String imagePath){
+    public static void insertIntoElectronicsDB(String brand, String model, String description, String imagePath){
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
          
-            PreparedStatement ps = con.prepareStatement("INSERT INTO electronics(mbrand, mmodel, mprice,"
-                    + "mquantity, mdescription, mphoto) VALUES(?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO electronics(mbrand, mmodel,mdescription, mphoto) VALUES(?,?,?,?,?,?)");
             
             ps.setString(1, brand);
             ps.setString(2, model);
-            ps.setInt(3, price);
-            ps.setInt(4, qty);
-            ps.setString(5, description);
-            ps.setString(6, imagePath);
+            ps.setString(3, description);
+            ps.setString(4, imagePath);
             if(ps.executeUpdate()==1)
                 JOptionPane.showMessageDialog(null, "Entry successful!");
             
