@@ -42,7 +42,7 @@ public class Processing extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel9.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel9.setBackground(new java.awt.Color(255, 0, 0));
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
