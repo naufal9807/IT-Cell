@@ -138,12 +138,12 @@ public class KidsDB {
        public static void delete(String model){
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
-            PreparedStatement ps = con.prepareStatement("DELETE FROM kids WHERE mmodel=?");
+            PreparedStatement ps = con.prepareStatement("DELETE FROM kids WHERE id=?");
             ps.setString(1, model);
             if(ps.executeUpdate()==0)
-                JOptionPane.showMessageDialog(null, "Entry does not exist!");
+                JOptionPane.showMessageDialog(null, "Konten tidak ada!");
             else
-                JOptionPane.showMessageDialog(null, "Entry deleted successfully!");
+                JOptionPane.showMessageDialog(null, "Konten berhasil dihapus!");
             
         } catch (SQLException ex) {
             Logger.getLogger(ElectronicsDB.class.getName()).log(Level.SEVERE, null, ex);
