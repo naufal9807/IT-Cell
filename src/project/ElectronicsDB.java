@@ -71,13 +71,13 @@ public class ElectronicsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM electronics");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mdescription, mphoto FROM electronics");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
+                        rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 
                 list.add(pl);
@@ -95,13 +95,13 @@ public class ElectronicsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM electronics ORDER BY id DESC LIMIT 3");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mdescription, mphoto FROM electronics ORDER BY id DESC LIMIT 3");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
+                        rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 
                 list.add(pl);
@@ -118,13 +118,13 @@ public class ElectronicsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice, mquantity FROM electronics");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, FROM electronics");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        0, rs.getInt("mquantity"),null, null);
+                        null, null);
                 
                 list.add(pl);
 

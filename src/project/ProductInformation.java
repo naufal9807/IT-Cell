@@ -277,26 +277,7 @@ public class ProductInformation extends javax.swing.JFrame {
     
     private void addToCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartActionPerformed
         
-        if(Integer.parseInt(this.productInfoStock.getText())<Integer.parseInt(this.productQtyField.getText())){
-            JOptionPane.showMessageDialog(null, "Not enough product in Stock!");
-        }
-        else{
-            int qty = Integer.parseInt(this.productQtyField.getText());
-            ProductList p = new ProductList(this.productInfoBrandName.getText(), this.productInfoModel.getText(), qty*Integer.parseInt(this.productInfoPrice.getText()), 
-                                                Integer.parseInt(this.productQtyField.getText()), null, null);
-            cartItem.add(p);
-            JOptionPane.showMessageDialog(null, "Product added to cart!");
-   
-            int qtyTester = Integer.parseInt(this.productInfoStock.getText())-Integer.parseInt(this.productQtyField.getText());
-            
-            if(categoryChooser.equals("mobiles"))
-                    MobileDB.updateMobileDB(this.productInfoModel.getText(), qtyTester);
-            else if(categoryChooser.equals("kids"))
-                    KidsDB.updateKidsDB(this.productInfoModel.getText(), qtyTester);
-            else if(categoryChooser.equals("electronics"))
-                    ElectronicsDB.updateElectronicsDB(this.productInfoModel.getText(), qtyTester);
-            
-        }
+        
     }//GEN-LAST:event_addToCartActionPerformed
 
     private void productQtyFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productQtyFieldActionPerformed

@@ -22,19 +22,16 @@ import javax.swing.JOptionPane;
  */
 public class KidsDB {
     public static boolean flag = false;
-    public static void insertIntoKidsDB(String brand, String model, int price, int qty, String description, String imagePath){
+    public static void insertIntoKidsDB(String brand, String model, String description, String imagePath){
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
          
-            PreparedStatement ps = con.prepareStatement("INSERT INTO kids(mbrand, mmodel, mprice,"
-                    + "mquantity, mdescription, mphoto) VALUES(?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO kids(mbrand, mmodel, mdescription, mphoto) VALUES(?,?,?,?)");
             
             ps.setString(1, brand);
             ps.setString(2, model);
-            ps.setInt(3, price);
-            ps.setInt(4, qty);
-            ps.setString(5, description);
-            ps.setString(6, imagePath);
+            ps.setString(3, description);
+            ps.setString(4, imagePath);
             
             if(ps.executeUpdate()==1)
                 JOptionPane.showMessageDialog(null, "Entry successful!");
@@ -45,14 +42,14 @@ public class KidsDB {
     
     }
     
-    public static void updateKidsDB(String model, int qty){
+    public static void updateKidsDB(String model){
          try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             
             PreparedStatement ps = con.prepareStatement("UPDATE kids SET mquantity=? WHERE mmodel=?");
             
-            ps.setInt(1, qty);
-            ps.setString(2, model);
+            
+            ps.setString(1, model);
             
             if(ps.executeUpdate()==0)
                 JOptionPane.showMessageDialog(null, "Entry does not exist!");
@@ -72,13 +69,13 @@ public class KidsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM kids");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel,mdescription, mphoto FROM kids");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
+                        rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 
                 list.add(pl);
@@ -96,13 +93,13 @@ public class KidsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM kids ORDER BY id DESC LIMIT 3");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mdescription, mphoto FROM kids ORDER BY id DESC LIMIT 3");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        rs.getInt("mprice"),rs.getInt("mquantity"),rs.getString("mdescription"),
+                        rs.getString("mdescription"),
                         rs.getString("mphoto"));
                 
                 list.add(pl);
@@ -120,13 +117,13 @@ public class KidsDB {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice, mquantity FROM kids");
+            ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel FROM kids");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("mbrand"),rs.getString("mmodel"),
-                        0, rs.getInt("mquantity"),null, null);
+                        null, null);
                 
                 list.add(pl);
 

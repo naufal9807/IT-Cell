@@ -37,7 +37,7 @@ public class MainPage extends javax.swing.JFrame {
         
         ArrayList<ProductList> list = ElectronicsDB.homePageContent();
         
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[4];
         
         DefaultTableModel model =  (DefaultTableModel) homeTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -45,27 +45,22 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
-
        
         model.setRowCount(0); //To clear mobileTable
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             homeTable.setRowHeight(150);
-            homeTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            homeTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         
         list.clear();
@@ -76,24 +71,20 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             homeTable.setRowHeight(150);
-            homeTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            homeTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         list.clear();
         
@@ -103,24 +94,20 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             homeTable.setRowHeight(150);
-            homeTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            homeTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         
         
@@ -237,7 +224,7 @@ public class MainPage extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Black Bengal Shopping");
+        jLabel1.setText("IT Cell");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -311,7 +298,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 347, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -578,15 +565,15 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+                "Brand Name", "Model", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -627,15 +614,15 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+                "Brand Name", "Model", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -676,15 +663,15 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+                "Judul Berina", "Tanggal", "Isi", "Photo"
             }
         ) {
             Class[] types = new Class[]{
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -817,15 +804,15 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+                "Brand Name", "Model", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -866,15 +853,15 @@ public class MainPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+                "Brand Name", "Model", "Features", "Photo"
             }
         ) {
             Class[] types = new Class[]{
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.String.class, java.lang.String.class,
+                java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -1301,7 +1288,7 @@ public class MainPage extends javax.swing.JFrame {
         
         ArrayList<ProductList> list = ElectronicsDB.homePageContent();
         
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[4];
         
         DefaultTableModel model =  (DefaultTableModel) homeTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -1309,27 +1296,23 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
-
+      
        
         model.setRowCount(0); //To clear mobileTable
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             homeTable.setRowHeight(150);
-            homeTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            homeTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         
         list.clear();
@@ -1340,24 +1323,20 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             homeTable.setRowHeight(150);
-            homeTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            homeTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         list.clear();
         
@@ -1367,24 +1346,20 @@ public class MainPage extends javax.swing.JFrame {
         homeTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         homeTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        homeTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             homeTable.setRowHeight(150);
-            homeTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            homeTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         
         
@@ -1455,8 +1430,6 @@ public class MainPage extends javax.swing.JFrame {
         electronicsTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         electronicsTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         electronicsTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        electronicsTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        electronicsTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
@@ -1464,18 +1437,16 @@ public class MainPage extends javax.swing.JFrame {
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             electronicsTable.setRowHeight(150);
-            electronicsTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            electronicsTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
     }//GEN-LAST:event_electronicsButtonActionPerformed
 
@@ -1508,7 +1479,7 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(signInStatus==false){
             cardParentPanel.removeAll();
-            cardParentPanel.add(signUpPanel);
+            cardParentPanel.add(signInPanel);
             cardParentPanel.repaint();
             cardParentPanel.revalidate();
         }
@@ -1533,8 +1504,6 @@ public class MainPage extends javax.swing.JFrame {
         for(int i=0; i<ProductInformation.cartItem.size(); i++){
             data[0] = ProductInformation.cartItem.get(i).getBrand();
             data[1] = ProductInformation.cartItem.get(i).getModel();
-            data[2] = ProductInformation.cartItem.get(i).getPrice();
-            data[3] = ProductInformation.cartItem.get(i).getQty();
             
             model.addRow(data);
             cartItemTable.setRowHeight(20);
@@ -1620,18 +1589,16 @@ public class MainPage extends javax.swing.JFrame {
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             mobileTable.setRowHeight(150);
-            mobileTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            mobileTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         
     }//GEN-LAST:event_mobilesButtonActionPerformed
@@ -1676,8 +1643,6 @@ public class MainPage extends javax.swing.JFrame {
         kidsTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
         kidsTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
         kidsTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-        kidsTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-        kidsTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
@@ -1685,18 +1650,16 @@ public class MainPage extends javax.swing.JFrame {
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getBrand();
             rowData[1] = list.get(i).getModel();
-            rowData[2] = list.get(i).getPrice();
-            rowData[3] = list.get(i).getQty();
-            rowData[4] = list.get(i).getDescription();
+            rowData[2] = list.get(i).getDescription();
             String temp = list.get(i).getMimage();
             ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[3] = ii;
             model.addRow(rowData);
             kidsTable.setRowHeight(150);
-            kidsTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            kidsTable.getColumnModel().getColumn(3).setPreferredWidth(150);
         }
         
     }//GEN-LAST:event_kidsButtonActionPerformed
@@ -1898,15 +1861,11 @@ public class MainPage extends javax.swing.JFrame {
         
         String brand = tm.getValueAt(selectedRow, 0).toString();
         String model = tm.getValueAt(selectedRow, 1).toString();
-        String price = tm.getValueAt(selectedRow, 2).toString();
-        String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 2).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 3);
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
-        pi.productInfoPrice.setText(price);
-        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
     }//GEN-LAST:event_mobileTableMouseClicked
@@ -1943,15 +1902,11 @@ public class MainPage extends javax.swing.JFrame {
         
         String brand = tm.getValueAt(selectedRow, 0).toString();
         String model = tm.getValueAt(selectedRow, 1).toString();
-        String price = tm.getValueAt(selectedRow, 2).toString();
-        String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 2).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 3);
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
-        pi.productInfoPrice.setText(price);
-        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
     }//GEN-LAST:event_electronicsTableMouseClicked
@@ -1966,15 +1921,11 @@ public class MainPage extends javax.swing.JFrame {
         
         String brand = tm.getValueAt(selectedRow, 0).toString();
         String model = tm.getValueAt(selectedRow, 1).toString();
-        String price = tm.getValueAt(selectedRow, 2).toString();
-        String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 2).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 3);
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
-        pi.productInfoPrice.setText(price);
-        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
     }//GEN-LAST:event_kidsTableMouseClicked
@@ -1998,15 +1949,11 @@ public class MainPage extends javax.swing.JFrame {
         
         String brand = tm.getValueAt(selectedRow, 0).toString();
         String model = tm.getValueAt(selectedRow, 1).toString();
-        String price = tm.getValueAt(selectedRow, 2).toString();
-        String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 2).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 3);
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
-        pi.productInfoPrice.setText(price);
-        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
         
@@ -2069,59 +2016,51 @@ public class MainPage extends javax.swing.JFrame {
             searchTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
             searchTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
             searchTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
-            searchTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
-            searchTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
 
 
             model.setRowCount(0);
             for(i=0 ; i<Search.electronics; i++){
                 rowData[0] = list.get(i).getBrand();
                 rowData[1] = list.get(i).getModel();
-                rowData[2] = list.get(i).getPrice();
-                rowData[3] = list.get(i).getQty();
-                rowData[4] = list.get(i).getDescription();
+                rowData[2] = list.get(i).getDescription();
                 String temp = list.get(i).getMimage();
                 ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
-                rowData[5] = ii;
+                rowData[3] = ii;
                 model.addRow(rowData);
                 searchTable.setRowHeight(150);
-                searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+                searchTable.getColumnModel().getColumn(3).setPreferredWidth(150);
             }
             for(k=i; k<Search.mobile+Search.electronics; k++){
                 rowData[0] = list.get(k).getBrand();
                 rowData[1] = list.get(k).getModel();
-                rowData[2] = list.get(k).getPrice();
-                rowData[3] = list.get(k).getQty();
-                rowData[4] = list.get(k).getDescription();
+                rowData[2] = list.get(k).getDescription();
                 String temp = list.get(k).getMimage();
                 ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
-                rowData[5] = ii;
+                rowData[3] = ii;
                 model.addRow(rowData);
                 searchTable.setRowHeight(150);
-                searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+                searchTable.getColumnModel().getColumn(3).setPreferredWidth(150);
             }
             System.out.println();
             for(j=k; j<Search.mobile+Search.electronics+Search.kids; j++){
                 rowData[0] = list.get(j).getBrand();
                 rowData[1] = list.get(j).getModel();
-                rowData[2] = list.get(j).getPrice();
-                rowData[3] = list.get(j).getQty();
-                rowData[4] = list.get(j).getDescription();
+                rowData[2] = list.get(j).getDescription();
                 String temp = list.get(j).getMimage();
                 ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
-                rowData[5] = ii;
+                rowData[3] = ii;
                 model.addRow(rowData);
                 searchTable.setRowHeight(150);
-                searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+                searchTable.getColumnModel().getColumn(3).setPreferredWidth(150);
             }
         }
         
@@ -2152,15 +2091,11 @@ public class MainPage extends javax.swing.JFrame {
         
         String brand = tm.getValueAt(selectedRow, 0).toString();
         String model = tm.getValueAt(selectedRow, 1).toString();
-        String price = tm.getValueAt(selectedRow, 2).toString();
-        String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 2).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 3);
         
         pi.productInfoBrandName.setText(brand);
         pi.productInfoModel.setText(model);
-        pi.productInfoPrice.setText(price);
-        pi.productInfoStock.setText(stock);
         pi.productInfoFeature.setText(feature);
         pi.productPhoto.setIcon(img);
         
@@ -2202,7 +2137,7 @@ public class MainPage extends javax.swing.JFrame {
 //            }
 //        });
         JFrame newMain = new MainPage();
-        newMain.setTitle("Black Bengal Shopping");
+        newMain.setTitle("IT Cell");
         newMain.setVisible(true);
         newMain.setResizable(false);
         

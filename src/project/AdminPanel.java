@@ -836,8 +836,7 @@ public class AdminPanel extends javax.swing.JFrame {
         }
         else if(mCat.getSelectedItem().equals("Kids")){
             if(!path.equals(""))
-                KidsDB.insertIntoKidsDB(mBrand.getText(), mModel.getText(), Integer.parseInt(mPrice.getText()), 
-                        Integer.parseInt(mQty.getText()), mDescription.getText(), path);
+                KidsDB.insertIntoKidsDB(mBrand.getText(), mModel.getText(), mDescription.getText(), path);
         }
         
         mBrand.setText("");
@@ -885,7 +884,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
             else if(stockStatusCat.getSelectedItem().equals("Kids")){
                 KidsDB.flag = true;
-                KidsDB.updateKidsDB(model, qty);
+                KidsDB.updateKidsDB(model);
             }
             
             stockUpdateModel.setText("");
