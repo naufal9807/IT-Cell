@@ -102,7 +102,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(1199, 699));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 121, 107));
+        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(1200, 72));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
@@ -139,9 +139,9 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 60));
 
-        jPanel4.setBackground(new java.awt.Color(0, 150, 136));
+        jPanel4.setBackground(new java.awt.Color(255, 0, 0));
 
-        updateButton.setBackground(new java.awt.Color(0, 150, 136));
+        updateButton.setBackground(new java.awt.Color(255, 0, 0));
         updateButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         updateButton.setForeground(new java.awt.Color(255, 255, 255));
         updateButton.setText("New Entry");
@@ -174,7 +174,7 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
 
-        checkStockButton.setBackground(new java.awt.Color(0, 150, 136));
+        checkStockButton.setBackground(new java.awt.Color(255, 0, 0));
         checkStockButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         checkStockButton.setForeground(new java.awt.Color(255, 255, 255));
         checkStockButton.setText("Check Stock");
@@ -207,7 +207,7 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
 
-        billingButton.setBackground(new java.awt.Color(0, 150, 136));
+        billingButton.setBackground(new java.awt.Color(255, 0, 0));
         billingButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         billingButton.setForeground(new java.awt.Color(255, 255, 255));
         billingButton.setText("Billing");
@@ -264,7 +264,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1210, 50));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 70, 1210, 50));
 
         cardAdminParentLayout.setBackground(new java.awt.Color(255, 255, 255));
         cardAdminParentLayout.setLayout(new java.awt.CardLayout());
