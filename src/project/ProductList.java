@@ -23,8 +23,6 @@ public class ProductList {
     public ProductList(String brand, String model, String description, String image) {
         this.brand = brand;
         this.model = model;
-        this.price = price;
-        this.qty = qty;
         this.description = description;
         this.mimage = image;
     }
@@ -44,23 +42,7 @@ public class ProductList {
     public void setModel(String model) {
         this.model = model;
     }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getQty() {
-        return qty;
-    }
-
-    public void setQty(int qty) {
-        this.qty = qty;
-    }
-
+    
     public String getDescription() {
         return description;
     }
