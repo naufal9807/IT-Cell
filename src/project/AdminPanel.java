@@ -293,6 +293,11 @@ public class AdminPanel extends javax.swing.JFrame {
 
         mCat.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         mCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Berita", "Mobile", "Tips" }));
+        mCat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mCatActionPerformed(evt);
+            }
+        });
         updatePanel.add(mCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
 
         mDescription.setColumns(20);
@@ -735,6 +740,10 @@ public class AdminPanel extends javax.swing.JFrame {
     private void checkStockButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkStockButtonMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_checkStockButtonMouseClicked
+
+    private void mCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mCatActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
