@@ -134,12 +134,11 @@
                               <Component id="productInfoStock" min="-2" pref="166" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="productPhoto" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="productInfoPrice" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="productPhoto" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="productInfoPrice" min="-2" pref="166" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -238,7 +237,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="40" green="4d" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Brand:"/>
+                <Property name="text" type="java.lang.String" value="Nama"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="productInfoBrand3">
@@ -249,7 +248,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="40" green="4d" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Model:"/>
+                <Property name="text" type="java.lang.String" value="Detail"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="productInfoBrand4">
@@ -260,7 +259,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="40" green="4d" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Features:"/>
+                <Property name="text" type="java.lang.String" value="Isi"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="productInfoBrandName">

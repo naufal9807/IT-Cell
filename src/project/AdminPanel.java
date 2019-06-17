@@ -229,7 +229,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 77, 64));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Product Details");
+        jLabel3.setText("Tambah Data");
         updatePanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 24, 1200, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 77, 64));
@@ -241,7 +241,7 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel4.setText("Brand:");
+        jLabel4.setText("Nama :");
         updatePanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 104, -1));
 
         mBrand.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -266,18 +266,18 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel5.setText("Model:");
+        jLabel5.setText("Detail :");
         updatePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 104, -1));
 
         jLabel6.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel6.setText("Category:");
+        jLabel6.setText("Kategori :");
         updatePanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 104, -1));
 
         mPhotoPath.setEditable(false);
         mPhotoPath.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         mPhotoPath.setForeground(new java.awt.Color(0, 77, 64));
-        mPhotoPath.setText("Choose photo:");
+        mPhotoPath.setText("Pilih Foto");
         mPhotoPath.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
         mPhotoPath.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,8 +288,8 @@ public class AdminPanel extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 77, 64));
-        jLabel9.setText("Product Description:");
-        updatePanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 140, -1));
+        jLabel9.setText("Isi :");
+        updatePanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 70, -1));
 
         mCat.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         mCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Berita", "Mobile", "Tips" }));
@@ -327,7 +327,7 @@ public class AdminPanel extends javax.swing.JFrame {
         LogInButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         LogInButton.setForeground(new java.awt.Color(255, 255, 255));
         LogInButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Database_24px.png"))); // NOI18N
-        LogInButton.setText("Update");
+        LogInButton.setText("Tambah");
         LogInButton.setBorder(null);
         LogInButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LogInButton.addActionListener(new java.awt.event.ActionListener() {
@@ -335,7 +335,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 LogInButtonActionPerformed(evt);
             }
         });
-        updatePanel.add(LogInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 460, 130, 50));
+        updatePanel.add(LogInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 400, 130, 50));
 
         cardAdminParentLayout.add(updatePanel, "card3");
 

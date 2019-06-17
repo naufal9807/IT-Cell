@@ -86,7 +86,7 @@ public class NotificationForm extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 77, 64));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Signing up successful!");
+        jLabel7.setText("Berhasil mendaftar!");
 
         LogInButton.setBackground(new java.awt.Color(0, 77, 64));
         LogInButton.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N

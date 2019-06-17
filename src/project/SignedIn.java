@@ -67,13 +67,13 @@ public class SignedIn extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 77, 64));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("You're signed in as:");
+        jLabel9.setText("Selamat datang:");
 
         goBackButton.setBackground(new java.awt.Color(0, 77, 64));
         goBackButton.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         goBackButton.setForeground(new java.awt.Color(255, 255, 255));
         goBackButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Go_Back_24px.png"))); // NOI18N
-        goBackButton.setText("Go Back");
+        goBackButton.setText("Kembali");
         goBackButton.setBorder(null);
         goBackButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         goBackButton.addActionListener(new java.awt.event.ActionListener() {
@@ -89,16 +89,16 @@ public class SignedIn extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(173, 173, 173)
                 .addComponent(jLabel6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(190, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(0, 75, Short.MAX_VALUE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(loggerName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
+                        .addGap(0, 98, Short.MAX_VALUE)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(loggerName, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(90, 90, 90))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(logOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)

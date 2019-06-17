@@ -173,7 +173,7 @@
                   <Color blue="40" green="4d" red="0" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Signing up successful!"/>
+                <Property name="text" type="java.lang.String" value="Berhasil mendaftar!"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

@@ -100,15 +100,15 @@ public class ProductInformation extends javax.swing.JFrame {
 
         productInfoBrand.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         productInfoBrand.setForeground(new java.awt.Color(0, 77, 64));
-        productInfoBrand.setText("Brand:");
+        productInfoBrand.setText("Nama");
 
         productInfoBrand3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         productInfoBrand3.setForeground(new java.awt.Color(0, 77, 64));
-        productInfoBrand3.setText("Model:");
+        productInfoBrand3.setText("Detail");
 
         productInfoBrand4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         productInfoBrand4.setForeground(new java.awt.Color(0, 77, 64));
-        productInfoBrand4.setText("Features:");
+        productInfoBrand4.setText("Isi");
 
         productInfoBrandName.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         productInfoBrandName.setForeground(new java.awt.Color(0, 77, 64));
@@ -143,11 +143,10 @@ public class ProductInformation extends javax.swing.JFrame {
                         .addGap(128, 128, 128)
                         .addComponent(productInfoStock, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(productPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(productInfoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(productPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(productInfoPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(5, 5, 5)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()

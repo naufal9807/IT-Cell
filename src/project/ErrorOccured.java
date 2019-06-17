@@ -86,7 +86,7 @@ public class ErrorOccured extends javax.swing.JFrame {
         errorMessage.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         errorMessage.setForeground(new java.awt.Color(255, 0, 0));
         errorMessage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        errorMessage.setText("Sorry, an error occured! Try again.");
+        errorMessage.setText("Maaf, terjadi kesalahan! Silahkan coba lagi.");
 
         LogInButton.setBackground(new java.awt.Color(0, 77, 64));
         LogInButton.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N

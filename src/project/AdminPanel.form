@@ -257,7 +257,7 @@
                       <Color blue="40" green="4d" red="0" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Product Details"/>
+                    <Property name="text" type="java.lang.String" value="Tambah Data"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -295,7 +295,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="40" green="4d" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Brand:"/>
+                    <Property name="text" type="java.lang.String" value="Nama :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -361,7 +361,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="40" green="4d" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Model:"/>
+                    <Property name="text" type="java.lang.String" value="Detail :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -377,7 +377,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="40" green="4d" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Category:"/>
+                    <Property name="text" type="java.lang.String" value="Kategori :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -394,7 +394,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="40" green="4d" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Choose photo:"/>
+                    <Property name="text" type="java.lang.String" value="Pilih Foto"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder>
@@ -420,11 +420,11 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="40" green="4d" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Product Description:"/>
+                    <Property name="text" type="java.lang.String" value="Isi :"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="190" y="240" width="140" height="-1"/>
+                      <AbsoluteConstraints x="200" y="250" width="70" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -548,7 +548,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons/icons8_Add_Database_24px.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Update"/>
+                    <Property name="text" type="java.lang.String" value="Tambah"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -561,7 +561,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="1000" y="460" width="130" height="50"/>
+                      <AbsoluteConstraints x="930" y="400" width="130" height="50"/>
                     </Constraint>
                   </Constraints>
                 </Component>
